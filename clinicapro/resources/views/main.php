@@ -55,7 +55,37 @@
         <!-- inicio del contenido -->
         <div class="contenido">
             <div class="contenido--tabla">
-                
+                <center>
+                    <h2 class="contenido--titulo">
+                        ADMINISTRADORES
+                    </h2>
+                    <div class="tabla">
+                        <table class="tabla--datos">
+                            <thead class="titulo">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Rol</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>Alvaro Anderson</td>
+                                    <td>Morales Caballero</td>
+                                    <td>Sistemas</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Efrain alex</td>
+                                    <td>Morales Caballero</td>
+                                    <td>Geotegnia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </center>
             </div>
         </div>
         <!-- finb del contenido -->
