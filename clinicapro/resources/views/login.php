@@ -17,7 +17,7 @@
 			<br>
 			<div class="iniciar--campo">
 				<h5>Nombre</h5>
-				<input class="iniciar--input" type="email" name="correo" placeholder="tu-correo@gmail.com">
+				<input class="iniciar--input" type="text" name="correo" placeholder="tu-correo@gmail.com">
 			</div>
 			<br>
 			<div class="iniciar--campo">
