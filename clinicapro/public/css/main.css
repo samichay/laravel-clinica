@@ -1,0 +1,36 @@
+.b-login{
+	background: url('../img/fondo-mj.png');
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.iniciar{
+	padding: 4em 3em;
+	background: white;
+}
+.iniciar .inicar--title{
+	margin: 0 0 2.5em 0;
+}
+.iniciar .iniciar--campo{
+	margin: 1px 0;
+}
+.iniciar .iniciar--input{
+	padding: 1em 1em;
+	border-radius: 10px;
+	width: 23em;
+	border: none;
+	background: #FAFAFA;
+	border:  solid #D2D2D2 1px;
+	font-size: 14px;
+}
+.iniciar .btn-principal{
+	margin: 1.5em 0 0 0;
+	padding: 1em 4em;
+	background: #FF437F;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;	
+}
