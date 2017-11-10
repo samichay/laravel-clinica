@@ -53,7 +53,10 @@
 		</div>
         <!-- fin del menu lateral -->
         <!-- inicio del contenido -->
-        <div>
+        <div class="contenido">
+            <div class="contenido--tabla">
+                
+            </div>
         </div>
         <!-- finb del contenido -->
 
