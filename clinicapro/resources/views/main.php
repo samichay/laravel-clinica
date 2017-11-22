@@ -18,37 +18,37 @@
 			<div id="contenedor-logos-primero" class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Inicio</p>
+				<a href="#" class="title-menu">Inicio</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Registro</p>
+				<a href="#" class="title-menu">Registro</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Consultas</p>
+				<a href="#" class="title-menu">Consultas</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Reportes</p>
+				<a href="#" class="title-menu">Reportes</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Estadisticas</p>
+				<a href="#" class="title-menu">Estadisticas</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
 				</div>
-				<p class="title-menu">Ayuda</p>
+				<a href="#" class="title-menu">Ayuda</a>
 			</div>
 		</div>
         <!-- fin del menu lateral -->
