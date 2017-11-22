@@ -17,4 +17,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/registropaciente',function(){
+	return view('registrop');
+});
 
