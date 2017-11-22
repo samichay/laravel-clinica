@@ -17,38 +17,38 @@
 
 			<div id="contenedor-logos-primero" class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Inicio</a>
 				</div>
-				<a href="#" class="title-menu">Inicio</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Registro</a>
 				</div>
-				<a href="#" class="title-menu">Registro</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Consultas</a>
 				</div>
-				<a href="#" class="title-menu">Consultas</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Reportes</a>
 				</div>
-				<a href="#" class="title-menu">Reportes</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Estadisticas</a>
 				</div>
-				<a href="#" class="title-menu">Estadisticas</a>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="#" class="title-menu">Ayuda</a>	
 				</div>
-				<a href="#" class="title-menu">Ayuda</a>
 			</div>
 		</div>
         <!-- fin del menu lateral -->

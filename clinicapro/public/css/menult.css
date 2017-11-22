@@ -26,22 +26,26 @@ div#contenedor-logos-primero{
 
 div.contenedor-logos{
 	margin-top:20px;
-	margin-left:10px;
+	margin-left:12px;
 	width:130px;
 	height:40px;
 	
 }
 
 div.logo{
-	width:40px;
-	height:40px;
-	background-image:url(pictures/menu.png);
+	width:30px;
+	height:30px;
+	background-image:url(../img/menu.png);
 	float: left;
 }
 
-p.title-menu{
+a.title-menu{
 	margin-left:60px;
 	line-height: 40px;
+	color: white;
+}
+.title-menu:hover{
+	color: hsl(0, 0%, 63%);
 }
 
 /*body*/
