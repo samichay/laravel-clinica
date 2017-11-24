@@ -40,6 +40,18 @@
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<a href="login" class="title-menu">IniciarSesion?</a>
+				</div>
+			</div>
+
+			<div class="contenedor-logos">
+				<div class="logo">
+					<a href="logout" class="title-menu">Deslogear?</a>
+				</div>
+			</div>
+
+			<div class="contenedor-logos">
+				<div class="logo">
 					<a href="#" class="title-menu">Estadisticas</a>
 				</div>
 			</div>
