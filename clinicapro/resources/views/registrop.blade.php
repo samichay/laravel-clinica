@@ -81,16 +81,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tabla--datos-fila">
-                                    <td scope="row">1</td>
-                                    <td>Alvaro Anderson</td>
-                                    <td>998 456 783</td>
-                                    <td>76471188</td>
-                                    <td>
-                                    	<button type="button">Edit</button>
-                                    	<button type="button">Eliminar</button>
-                                    </td>
-                                </tr>
+                            	@foreach ($paciente as $key => $paciente)
+									<tr class="tabla--datos-fila">
+										<th scope="row">{{$paciente->id_paciente}}</th>
+										<td>{{$paciente->nombres}}</td>
+										<td>{{$paciente->celular}}</td>
+										<td>{{$paciente->dni}}	</td>
+										<td>
+	                                    	<button type="button">Edit</button>
+	                                    	<button type="button">Eliminar</button>
+	                                    </td>
+									</tr>
+								@endforeach
                                 <tr class="tabla--datos-fila">
                                     <td>2</td>
                                     <td>Efrain alex</td>
@@ -111,7 +113,8 @@
         <!-- inicio del modal -->
         <div id="modalregistropaciente" class="modalDialog">
 			<div>
-				<form action="" method="POST">
+				<form action="/registropaciente" method="POST">
+					{{ csrf_field() }}
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Nuevo paciente</h2>
 				<div class="iniciar--campo">

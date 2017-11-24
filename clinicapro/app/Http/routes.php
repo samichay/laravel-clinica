@@ -10,13 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//inicio paciente
+Route::get('/registropaciente', 'PacienteController@vista');
+Route::post('/registropaciente', 'PacienteController@create');
+//fin paciete
 Route::get('usuario', 'UsuarioControlador@index');
 Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');
-
-Route::get('/registropaciente',function(){
-	return view('registrop');
-});
 
 Route::auth();
 Route::get('/home', 'HomeController@index');
