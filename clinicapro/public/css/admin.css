@@ -10,26 +10,5 @@ body{
     margin: 0 0 0 12em;
     height: 100vh;
     background: white;
-}
-.contenido--titulo{
-    padding: 2em 2em;
-
-}
-
-.tabla{
-	background: white;
-	width: 80%;
-}
-.tabla--datos{
-	width: 100%;
-	text-align: center;
-}
-.tabla--datos tr{
-	border-bottom: solid 1px #ecf0f1;
-}
-.tabla--datos th{
-	padding: 0.8em;
-}
-.tabla--datos td{
-	padding: 0.8em;
+    padding: 2em;
 }

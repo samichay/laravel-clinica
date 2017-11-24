@@ -54,15 +54,108 @@
         <!-- inicio del contenido -->
         <div class="contenido">
             <div class="contenido--tabla">
+            	<h3 class="contenido--titulo">
+                    Registro de paciente
+                </h3>
+                <br><br>
+                <a href="#modalregistropaciente" type="button" class="btn-primario">+ Nuevo Paciente</a>	
+                <br><br><br>
                 <center>
-                    <h2 class="contenido--titulo">
-                        Registro de paciente
-                    </h2>
-                    
+                    <div class="tabla">
+                        <table class="tabla--datos">
+                            <thead class="titulo">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombres</th>
+                                    <th>Celular</th>
+                                    <th>DNI</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tabla--datos-fila">
+                                    <td scope="row">1</td>
+                                    <td>Alvaro Anderson</td>
+                                    <td>998 456 783</td>
+                                    <td>76471188</td>
+                                    <td>
+                                    	<button type="button">Edit</button>
+                                    	<button type="button">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <tr class="tabla--datos-fila">
+                                    <td>2</td>
+                                    <td>Efrain alex</td>
+                                    <td>Morales Caballero</td>
+                                    <td>764711889</td>
+                                    <td>
+                                    	<button type="button">Edit</button>
+                                    	<button type="button">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </center>
             </div>
         </div>
         <!-- finb del contenido -->
+        <!-- inicio del modal -->
+        <div id="modalregistropaciente" class="modalDialog">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h2>Nuevo paciente</h2>
+				<div class="iniciar--campo">
+					<br>
+					<h5>Nombres</h5>
+					<input class="input--formulario" type="text" name="nombre" placeholder="Nombre del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Apellidos</h5>
+					<input class="input--formulario" type="text" name="apellidos" placeholder="apellidos del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Celular</h5>
+					<input class="input--formulario" type="text" name="celular" placeholder="Celular del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>DNI</h5>
+					<input class="input--formulario" type="text" name="dni" placeholder="DNI del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Fecha de nacimiento</h5>
+					<input class="input--formulario" type="text" name="fenacimiento" placeholder="la fecha de nacimiento">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Peso</h5>
+					<input class="input--formulario" type="text" name="peso" placeholder="Peso del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Talla</h5>
+					<input class="input--formulario" type="text" name="talla" placeholder="Talla del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Direccion</h5>
+					<input class="input--formulario" type="text" name="direccion" placeholder="Direccion del paciente">
+				</div>
+				<br>
+				<div class="iniciar--campo">
+					<h5>Estado Civil</h5>
+					<input class="input--formulario" type="text" name="estcivil" placeholder="Estado civil">
+				</div>
+				<br>
+				<button type="submit" class="btn-primario">Agregar</button>
+				<br>
+			</div>
+		</div>
+        <!-- fin del modal -->
 
 
 
