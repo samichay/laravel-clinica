@@ -9,7 +9,8 @@
 </head>
 <body class="b-login">
 	<div class="iniciar">
-		<form action="login_submit" method="POST" accept-charset="utf-8">
+		<form action="login" method="POST" accept-charset="utf-8">
+			{{ csrf_field() }}  
 			<div class="iniciar--title">
 				<h2>SIEMPRE MUJER</h2>
 				<span>Consultorio obstetrico</span>

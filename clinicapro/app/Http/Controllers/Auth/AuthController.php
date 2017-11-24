@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\Usuario;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -20,7 +20,6 @@ class AuthController extends Controller
     | a simple trait to add these behaviors. Why don't you explore it?
     |
     */
-
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
@@ -40,6 +39,16 @@ class AuthController extends Controller
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
+    public function loginUsername()
+    {
+        return property_exists($this, 'username') ? $this->username :'nick';
+    }
+
+    protected function getFailedLoginMessage()
+    {
+        return 'Estas credenciales no coinciden en nuestro registro';
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,9 +58,11 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'nombre' => 'required|max:255',
+            'apellido' => 'required|max:255',
+            'nick' => 'required|max:50|unique:Usuario',
             'password' => 'required|min:6|confirmed',
+            'tipo' => 'required|min:8',
         ]);
     }
 
@@ -63,10 +74,12 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+        return Usuario::create([
+            'nombres' => $data['nombre'],
+            'apellidos' => $data['apellido'],
+            'nick' => $data['nick'],
             'password' => bcrypt($data['password']),
+            'tipo_usuario' => $data['tipo'],
         ]);
     }
 }

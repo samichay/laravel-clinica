@@ -6,14 +6,19 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic functional test example.
-     *
-     * @return void
-     */
-    public function testBasicExample()
+    function test_UsuariosExample()
     {
-        $this->visit('/')
-             ->see('Laravel 5');
+        $this->visit('/usuario')
+        ->assertResponseOk()   
+        ->see('Samichay')
+        ->see('ppk');
+           
+    }
+
+    function test_Usuarios_datos_personalizados()
+    {
+        $this->visit('/usuario/id/jorge')
+        ->assertResponseOk()   
+        ->see('Aqui se mostraran los datos del usuario jorge');
     }
 }
