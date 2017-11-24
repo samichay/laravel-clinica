@@ -57,8 +57,6 @@ table{
 .tabla--datos-fila:hover{
 	background: #f6f6f6;	
 }
-
-
 .modalDialog {
 	position: fixed;
 	overflow-x: hidden;

@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/menult.css" />
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/admin.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 
 	<body>
@@ -16,36 +18,42 @@
 
 			<div id="contenedor-logos-primero" class="contenedor-logos">
 				<div class="logo">
+					<i class="material-icons">dns</i>
 					<a href="#" class="title-menu">Inicio</a>
 				</div>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
-					<a href="#" class="title-menu">Registro</a>
+					<i class="material-icons">assignment_turned_in</i>
+					<li><a href="#" class="title-menu">Registro</a><li>
 				</div>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<i class="material-icons">local_library</i>
 					<a href="#" class="title-menu">Consultas</a>
 				</div>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<i class="material-icons">content_paste</i>
 					<a href="#" class="title-menu">Reportes</a>
 				</div>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<i class="material-icons">trending_up</i>
 					<a href="#" class="title-menu">Estadisticas</a>
 				</div>
 			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
+					<i class="material-icons">build</i>
 					<a href="#" class="title-menu">Ayuda</a>	
 				</div>
 			</div>
@@ -103,6 +111,7 @@
         <!-- inicio del modal -->
         <div id="modalregistropaciente" class="modalDialog">
 			<div>
+				<form action="" method="POST">
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Nuevo paciente</h2>
 				<div class="iniciar--campo">
@@ -153,6 +162,7 @@
 				<br>
 				<button type="submit" class="btn-primario">Agregar</button>
 				<br>
+				</form>
 			</div>
 		</div>
         <!-- fin del modal -->

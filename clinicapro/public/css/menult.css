@@ -32,21 +32,27 @@ div.contenedor-logos{
 	
 }
 
-div.logo{
+.logo{
 	width:30px;
 	height:30px;
-	background-image:url(../img/menu.png);
+	display: flex;
+	align-items: center;
 	float: left;
 }
+.logo i{
+	margin: 0 0 0 20px;
+	color: rgba(163,175,183,.9);
+}
 
-a.title-menu{
-	margin-left:60px;
+.title-menu{
+	margin-left:20px;
 	line-height: 40px;
-	color: white;
+	color: rgba(163,175,183,.9);
 }
 .title-menu:hover{
-	color: hsl(0, 0%, 63%);
+	color: white;
 }
+
 
 /*body*/
 
@@ -82,3 +88,10 @@ img#foto-contenedor-1{
 	width:300px;
 	display:block;
 }
+
+
+
+
+
+
+
