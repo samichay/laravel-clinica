@@ -68,7 +68,7 @@
             <div class="contenido--tabla">
                 <center>
                     <h2 class="contenido--titulo">
-                        ADMINISTRADORE
+                        ADMINISTRADO DE LA RAMA ALVARO
                     </h2>
                     <div class="tabla">
                         <table class="tabla--datos">
