@@ -29,6 +29,18 @@
 					<li><a href="#" class="title-menu">Registro</a><li>
 				</div>
 			</div>
+			<div id="menu--desplegable1">
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Pacientes</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Usuarios</a><li>
+					</div>
+				</div>
+			</div>
 
 			<div class="contenedor-logos">
 				<div class="logo">
@@ -93,16 +105,6 @@
 	                                    </td>
 									</tr>
 								@endforeach
-                                <tr class="tabla--datos-fila">
-                                    <td>2</td>
-                                    <td>Efrain alex</td>
-                                    <td>Morales Caballero</td>
-                                    <td>764711889</td>
-                                    <td>
-                                    	<button type="button">Edit</button>
-                                    	<button type="button">Eliminar</button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
