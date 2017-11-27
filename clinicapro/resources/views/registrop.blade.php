@@ -75,7 +75,7 @@
         <div class="contenido">
             <div class="contenido--tabla">
             	<h3 class="contenido--titulo">
-                    Registro de paciente
+                    Registro de choque
                 </h3>
                 <br><br>
                 <a href="#modalregistropaciente" type="button" class="btn-primario">+ Nuevo Paciente</a>	

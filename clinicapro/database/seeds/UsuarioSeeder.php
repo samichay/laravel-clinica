@@ -15,7 +15,7 @@ class UsuarioSeeder extends Seeder
         Usuario::create([
         	'nombres'=>'Hugo',
         	'apellidos'=>'Barraza',
-        	'contraseña'=>'123',
+        	'password'=>'123',
         	'nick'=>'brrz',
         	'tipo_usuario'=>'invitado',
         ]);
