@@ -100,7 +100,7 @@
 										<td>{{$paciente->celular}}</td>
 										<td>{{$paciente->dni}}	</td>
 										<td>
-	                                    	<button type="button">Edit</button>
+											<a href="pacientes/actualizar/{{$paciente->id_paciente}}" type="button" class="btn-primario"> Edit</a>
 	                                    	<button type="button">Eliminar</button>
 	                                    </td>
 									</tr>

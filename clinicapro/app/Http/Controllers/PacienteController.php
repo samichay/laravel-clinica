@@ -25,9 +25,26 @@ class PacienteController extends Controller
 
     	return redirect('/registropaciente');
     }
+
     public function vista()
 	{
 		$paciente = Paciente::all();
 		return view('registrop',['paciente'=>$paciente]);
 	}
+
+    public function actualizar($id)
+    {
+        $paciente = Paciente::find($id);
+        return view('edit_paciente',['paciente'=>$paciente]);
+    }
+
+    public function update($id,Request $request)
+    {
+        $paciente = Paciente::find($id);
+        $paciente = fill($request->all());
+        $paciente = save;
+        return redirect('/registropaciente');
+    }
+
+
 }
