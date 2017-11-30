@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tipo_Atencion extends Model
 {
-     protected $table ='tipo_atencion';
+    protected $table ='tipo_atencion';
+    protected $primaryKey = 'id_tipo';
 
-    protected $fillable = ['id_tipo','descripcion'];
+    protected $fillable = ['descripcion'];
     public $timestamps =false;
 }

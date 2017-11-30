@@ -26,6 +26,8 @@ class PacienteUpdateRequest extends Request
         return [
             'nombres'=> 'required',
             'apellidos'=> 'required',
+            'dni' => 'unique:paciente,id_paciente',
+
         ];        
     }
 }

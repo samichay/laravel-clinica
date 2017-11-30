@@ -12,6 +12,9 @@ use Redirect;
 
 class PacienteController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +22,7 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        $pacientes = Paciente::Paginate(10);
+        $pacientes = Paciente::Paginate(20);
         return view('registrop',['pacientes'=>$pacientes]);
     }
 
