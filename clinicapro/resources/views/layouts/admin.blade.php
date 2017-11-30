@@ -6,8 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="{{asset('css/menult.css')}}" />
         <link rel="stylesheet" href="{{asset('css/base.css')}}">
         <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-        <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}"
-      rel="stylesheet">
+        <script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
+        <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
 	</head>
 
 	<body>

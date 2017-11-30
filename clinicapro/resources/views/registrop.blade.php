@@ -2,13 +2,15 @@
 
 @if(Session::has('message'))
 <div class="alert alert-success alert-dismissable" role="alert">
-	<a href="/paciente" class="close2" data-dismiss="alert" aria-label="close">&times;</a>
+	<a href="/paciente" class="close3" data-dismiss="alert" aria-label="close">&times;</a>
  {{Session::get('message')}}
 </div>
 @endif
+
+
 @section('body')
             	<h3 class="contenido--titulo">
-                    Registro de choque
+                    Registro de Pacientes
                 </h3>
                 <br><br>
                 <a href="#modalregistropaciente" type="button" class="btn-primario">+ Nuevo Paciente</a>	
@@ -26,7 +28,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            	@foreach ($paciente as $key => $paciente)
+                            	@foreach ($pacientes as $key => $paciente)
 									<tr class="tabla--datos-fila">
 										<th scope="row">{{$paciente->id_paciente}}</th>
 										<td>{{$paciente->nombres}}</td>
@@ -34,19 +36,23 @@
 										<td>{{$paciente->dni}}	</td>
 										<td>{!!link_to_route('paciente.edit', $title = 'Edit', $parameters = $paciente, $attributes = ['class'=>'btn-primario'])!!}{{-- 
 											<a href="paciente.edit" type="button" class="btn-primario"> Edit</a> --}}
-	                                    	<button type="button">Eliminar</button>
 	                                    </td>
 									</tr>
 								@endforeach
                             </tbody>
                         </table>
+                        <br>
+					{!!$pacientes->render()!!}
                     </div>
+
                 </center>
             </div>
         </div>
         <!-- finb del contenido -->
         <!-- inicio del modal -->
         <div id="modalregistropaciente" class="modalDialog">
+
+		@include('request')
 			<div>
 				{!!Form::open(['route'=>'paciente.store', 'method'=>'POST'])!!}
 				<a href="#close" title="Close" class="close">X</a>

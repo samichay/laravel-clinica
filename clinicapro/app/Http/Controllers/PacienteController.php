@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Http\Requests\PacienteCrearRequest; 
+use App\Http\Requests\PacienteUpdateRequest; 
 use App\Models\Paciente;
 use Session;
 use Redirect;
@@ -18,8 +19,8 @@ class PacienteController extends Controller
      */
     public function index()
     {
-        $paciente = Paciente::all();
-        return view('registrop',['paciente'=>$paciente]);
+        $pacientes = Paciente::Paginate(10);
+        return view('registrop',['pacientes'=>$pacientes]);
     }
 
     /**
@@ -38,7 +39,7 @@ class PacienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PacienteCrearRequest $request)
     {
         $paciente =new Paciente();
         $paciente -> nombres =$request -> nombres;
@@ -85,7 +86,7 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PacienteUpdateRequest $request, $id)
     {
         $paciente = Paciente::find($id);
         $paciente->fill($request->all());
@@ -104,6 +105,9 @@ class PacienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        Paciente::destroy($id);
+        Session::flash('message','Usuario Eliminado Correctamente');
+        return Redirect::to('/paciente');
     }
 }
