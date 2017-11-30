@@ -30,6 +30,5 @@
         <br>
 	{!!$insumos->render()!!}
     </div>
-
-                </center>
+</center>
 @endsection

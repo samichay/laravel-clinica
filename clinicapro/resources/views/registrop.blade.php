@@ -6,8 +6,6 @@
  {{Session::get('message')}}
 </div>
 @endif
-
-
 @section('body')
             	<h3 class="contenido--titulo">
                     Registro de Pacientes

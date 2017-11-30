@@ -18,6 +18,7 @@ Route::put('/pacientes/actualizar', 'PacienteController@update');
 Route::get('/pacientes/eliminar', 'PacienteController@delete');*/
 Route::resource('paciente','PacienteController');
 Route::resource('insumo','InsumosController');
+Route::resource('atencion','AtencionController');
 
 
 
