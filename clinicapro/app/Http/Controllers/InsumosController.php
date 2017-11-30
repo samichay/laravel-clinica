@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Insumos;
 use App\Http\Requests;
+use App\Http\Requests\InsumoCrearRequest;
+use Session;
+use Redirect;
 
 class InsumosController extends Controller
 {
+     public function __construct(){
+     $this->middleware('auth');
+    }
     /**s
      * Display a listing of the resource.
      *
@@ -37,7 +43,13 @@ class InsumosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $insumos =new Insumos();
+        $insumos -> nombre =$request -> nombre;
+        $insumos -> stock =$request -> stock;
+        $insumos -> descripcion =$request -> descripcion;
+        $insumos -> save();
+        Session::flash('message','Usuario Creado Correctamente');
+        return Redirect::to('/insumo');
     }
 
     /**
