@@ -34,8 +34,8 @@
 										<td>{{$paciente->nombres}}</td>
 										<td>{{$paciente->celular}}</td>
 										<td>{{$paciente->dni}}	</td>
-										<td>{!!link_to_route('paciente.edit', $title = 'Edit', $parameters = $paciente, $attributes = ['class'=>'btn-primario'])!!}{{-- 
-											<a href="paciente.edit" type="button" class="btn-primario"> Edit</a> --}}
+										<td>{!!link_to_route('paciente.edit', $title = 'create', $parameters = $paciente, $attributes = ['class'=>'material-icons btn-accion'])!!}{{-- 
+											<a href="paciente.edit" type="button" class="btn-accion">Edit</a> --}}
 	                                    </td>
 									</tr>
 								@endforeach

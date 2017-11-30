@@ -55,7 +55,7 @@ class PacienteController extends Controller
         $paciente -> direccion =$request -> direccion;
         $paciente -> Estado_civil =$request -> estcivil;
         $paciente -> save();
-         Session::flash('message','Usuario Creado Correctamente');
+        Session::flash('message','Usuario Creado Correctamente');
         return Redirect::to('/paciente');
     }
 
