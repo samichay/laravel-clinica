@@ -11,11 +11,15 @@
 |
 */
 //----------------inicio paciente
-Route::get('/pacientes', 'PacienteController@vista');
+/*Route::get('/pacientes', 'PacienteController@vista');
 Route::post('/pacientes/registro', 'PacienteController@create');
 Route::get('/pacientes/actualizar/{id}', 'PacienteController@actualizar');
-Route::post('/pacientes/actualizar', 'PacienteController@update');
-//Route::get('/pacientes/eliminar', 'PacienteController@delete');
+Route::put('/pacientes/actualizar', 'PacienteController@update');
+Route::get('/pacientes/eliminar', 'PacienteController@delete');*/
+Route::resource('paciente','PacienteController');
+
+
+
 //----------------fin paciete
 //------------------------------------------------------------------------
 //----------------inicio usuario
