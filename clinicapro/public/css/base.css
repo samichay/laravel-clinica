@@ -41,6 +41,20 @@ table{
 	background: #62a8ea;
 	color: white;
 }
+.btn-accion{
+	border: solid #62a8ea 1px;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+    background: none;
+    color: #62a8ea;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-accion:hover{
+	border:  solid #62a8ea 1px;
+	background: #62a8ea;
+	color: white;
+}
 
 .tabla{
 	background: while;

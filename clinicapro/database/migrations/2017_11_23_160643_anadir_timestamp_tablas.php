@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AñadirTimestampTablas extends Migration
+class AnadirTimestampTablas extends Migration
 {
     /**
      * Run the migrations.
