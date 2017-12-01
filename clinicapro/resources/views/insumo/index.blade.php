@@ -41,11 +41,7 @@
         <br>
 	{!!$insumos->render()!!}
     </div>
-<<<<<<< HEAD
 </center>
-=======
-
-                </center>
 <!-- inicio del modal -->
 <div id="modalregistroinsumo" class="modalDialog">
 
@@ -74,5 +70,4 @@
     </div>
 </div>
 <!-- fin del modal -->
->>>>>>> 21e68fa26565e1908d1763b7275651cf5117c9c7
 @endsection
