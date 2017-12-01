@@ -40,6 +40,11 @@
 						<li><a href="/usuario" class="title-menu">Usuarios</a><li>
 					</div>
 				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="/insumo" class="title-menu">Insumo</a><li>
+					</div>
+				</div>
 			</div>
 
 			<div class="contenedor-logos">
