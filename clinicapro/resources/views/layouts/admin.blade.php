@@ -32,12 +32,12 @@
 			<div id="menu--desplegable1">
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="#" class="title-menu">Pacientes</a><li>
+						<li><a href="/paciente" class="title-menu">Pacientes</a><li>
 					</div>
 				</div>
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="#" class="title-menu">Usuarios</a><li>
+						<li><a href="/usuario" class="title-menu">Usuarios</a><li>
 					</div>
 				</div>
 			</div>
