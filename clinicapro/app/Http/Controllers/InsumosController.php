@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Insumos;
 use App\Http\Requests;
-use App\Http\Requests\InsumoCrearRequest;
+use App\Http\Requests\InsumosUpdateRequest;
 use Session;
 use Redirect;
 
@@ -60,7 +60,7 @@ class InsumosController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -71,7 +71,8 @@ class InsumosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $insumo = Insumos::find($id);
+        return view('insumo.edit_insumo',['insumo'=>$insumo]);
     }
 
     /**
@@ -81,9 +82,13 @@ class InsumosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(InsumosUpdateRequest $request, $id)
     {
-        //
+        $insumo = Insumos::find($id);
+        $insumo->fill($request->all());
+        $insumo->save();
+        Session::flash('message','Usuario Actualizado Correctamente');
+        return Redirect::to('/insumo');
     }
 
     /**
@@ -94,6 +99,9 @@ class InsumosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        Insumos::destroy($id);
+        Session::flash('message','Insumo Eliminado Correctamente');
+        return Redirect::to('/insumo');
     }
 }

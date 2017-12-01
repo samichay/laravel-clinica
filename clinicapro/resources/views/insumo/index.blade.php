@@ -32,7 +32,8 @@
 						<td>{{$insumo->nombre}}</td>
 						<td>{{$insumo->stock}}</td>
 						<td>{{$insumo->descripcion}}	</td>
-						<td>{!!link_to_route('insumo.edit', $title = 'Edit', $parameters = $insumo, $attributes = ['class'=>'btn-primario'])!!}
+						<td>{!!link_to_route('insumo.edit', $title = 'create', $parameters = $insumo, $attributes = ['class'=>'material-icons btn-accion'])!!}{{-- 
+                                            <a href="paciente.edit" type="button" class="btn-accion">Edit</a> --}}
                         </td>
 					</tr>
 				@endforeach
@@ -41,7 +42,9 @@
         <br>
 	{!!$insumos->render()!!}
     </div>
+
 </center>
+
 <!-- inicio del modal -->
 <div id="modalregistroinsumo" class="modalDialog">
 
@@ -70,4 +73,8 @@
     </div>
 </div>
 <!-- fin del modal -->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8debda9cb0405bd032a3721881e3a5a07c48c486
 @endsection

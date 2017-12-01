@@ -17,7 +17,7 @@ class AtencionController extends Controller
     public function index()
     {
         
-        /*$atenciones = Atencion::Paginate(20);*/
+        $atenciones = Atencion::Paginate(20);
         /*$atenciones= Atencion::with('paciente');*/
 
         return view('atencion.index',['atenciones'=>$atenciones]);
