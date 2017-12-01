@@ -26,7 +26,7 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">assignment_turned_in</i>
-					<li><a href="#" class="title-menu">Registro</a><li>
+					<li><a href="paciente" class="title-menu">Registro</a><li>
 				</div>
 			</div>
 			<div id="menu--desplegable1">
