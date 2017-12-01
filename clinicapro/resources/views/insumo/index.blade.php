@@ -45,8 +45,6 @@
 
 </center>
 
-
-                </center>
 <!-- inicio del modal -->
 <div id="modalregistroinsumo" class="modalDialog">
 
@@ -75,5 +73,8 @@
     </div>
 </div>
 <!-- fin del modal -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8debda9cb0405bd032a3721881e3a5a07c48c486
 @endsection
