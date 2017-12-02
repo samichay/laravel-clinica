@@ -3,27 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Insumos;
 use App\Http\Requests;
-use App\Http\Requests\PacienteCrearRequest; 
-use App\Http\Requests\PacienteUpdateRequest; 
-use App\Models\Paciente;
+use App\Http\Requests\InsumosUpdateRequest;
 use Session;
 use Redirect;
 
-class PacienteController extends Controller
+class InsumosController extends Controller
 {
-    public function __construct(){
-        $this->middleware('auth');
+     public function __construct(){
+     $this->middleware('auth');
     }
-    /**
+    /**s
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $pacientes = Paciente::Paginate(20);
-        return view('registrop',['pacientes'=>$pacientes]);
+        $insumos = Insumos::Paginate(20);
+        return view('insumo.index',['insumos'=>$insumos]);
     }
 
     /**
@@ -42,21 +41,15 @@ class PacienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PacienteCrearRequest $request)
+    public function store(Request $request)
     {
-        $paciente =new Paciente();
-        $paciente -> nombres =$request -> nombres;
-        $paciente -> apellidos =$request -> apellidos;
-        $paciente -> celular =$request -> celular;
-        $paciente -> dni =$request -> dni;
-        $paciente -> fech_nac =$request -> fenacimiento;
-        $paciente -> peso =$request -> peso;
-        $paciente -> talla =$request -> talla;
-        $paciente -> direccion =$request -> direccion;
-        $paciente -> Estado_civil =$request -> estcivil;
-        $paciente -> save();
+        $insumos =new Insumos();
+        $insumos -> nombre =$request -> nombre;
+        $insumos -> stock =$request -> stock;
+        $insumos -> descripcion =$request -> descripcion;
+        $insumos -> save();
         Session::flash('message','Usuario Creado Correctamente');
-        return Redirect::to('/paciente');
+        return Redirect::to('/insumo');
     }
 
     /**
@@ -67,7 +60,7 @@ class PacienteController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -78,8 +71,8 @@ class PacienteController extends Controller
      */
     public function edit($id)
     {
-        $paciente = Paciente::find($id);
-        return view('edit_paciente',['paciente'=>$paciente]);
+        $insumo = Insumos::find($id);
+        return view('insumo.edit_insumo',['insumo'=>$insumo]);
     }
 
     /**
@@ -89,15 +82,13 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PacienteUpdateRequest $request, $id)
+    public function update(InsumosUpdateRequest $request, $id)
     {
-        $paciente = Paciente::find($id);
-        $paciente->fill($request->all());
-        $paciente->save();
+        $insumo = Insumos::find($id);
+        $insumo->fill($request->all());
+        $insumo->save();
         Session::flash('message','Usuario Actualizado Correctamente');
-        return Redirect::to('/paciente');
-/*
-        return redirect('/paciente');*/
+        return Redirect::to('/insumo');
     }
 
     /**
@@ -109,8 +100,8 @@ class PacienteController extends Controller
     public function destroy($id)
     {
         
-        Paciente::destroy($id);
-        Session::flash('message','Usuario Eliminado Correctamente');
-        return Redirect::to('/paciente');
+        Insumos::destroy($id);
+        Session::flash('message','Insumo Eliminado Correctamente');
+        return Redirect::to('/insumo');
     }
 }
