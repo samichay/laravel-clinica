@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Atencion;
 use App\Models\Usuario;
-use App\Models\TipoAtencion;
+use App\Models\Tipo_Atencion;
 use App\Models\Paciente;
 
 class NuevaAtencionSeeder extends Seeder
@@ -19,7 +19,7 @@ class NuevaAtencionSeeder extends Seeder
     		'fecha_atencion'=> '2017-11-12',
         	'hora_atencion' => '16:09:19',
         	'precio'=>'15',
-        	'id_tipo' => TipoAtencion::where('descripcion','Papanicolao')->value('id_tipo'),
+        	'id_tipo' => Tipo_Atencion::where('descripcion','Papanicolao')->value('id_tipo'),
         	'id_paciente'=> Paciente::where('nombres','Mayra Villavicencio')->value('id_paciente'),
         	'id_usuario'=> Usuario::where('nick','usuario1')->value('id_usuario'),
     	]);
