@@ -68,7 +68,7 @@
             <div class="contenido--tabla">
                 <center>
                     <h2 class="contenido--titulo">
-                        ADMINISTRADORES
+                        ADMINISTRADORESkaren y choque
                     </h2>
                     <div class="tabla">
                         <table class="tabla--datos">

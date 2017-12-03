@@ -47,11 +47,27 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">local_library</i>
-					<a href="#" class="title-menu">Consultas</a>
+					<a href="#" class="title-menu">Atencion</a>
+				</div>
+			</div>
+			<div id="menu--desplegable1">
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Completada</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Papanicolao</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Planificacion</a><li>
+					</div>
 				</div>
 			</div>
 
@@ -61,7 +77,28 @@
 					<a href="#" class="title-menu">Reportes</a>
 				</div>
 			</div>
-
+			<div id="menu--desplegable1">
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Historial</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Ganancia</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Insumos</a><li>
+					</div>
+				</div>
+				<div class="contenedor-logos">
+					<div class="logo">
+						<li><a href="#" class="title-menu">Citas</a><li>
+					</div>
+				</div>
+			</div>
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">trending_up</i>
