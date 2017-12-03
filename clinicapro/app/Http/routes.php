@@ -43,3 +43,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', function () {
     return view('main');
 });
+Route::get('/gcperro', function () {
+    return view('gcperro');
+});
