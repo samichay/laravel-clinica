@@ -120,7 +120,27 @@ table{
 	border-radius: 50px;
 }
 .close:hover { background: #00d9ff; }
-
+.targetas{
+	display: flex;
+}
+.targeta-uno{
+	background: #2e9ff3;
+    padding: 2em 1em;
+    text-align: center;
+	display: table;
+	color: white;
+}
+.targeta-dos{
+	background: #ec7179;
+    padding: 2em 1em;
+    text-align: center;
+	display: table;
+	color: white;
+	margin: 0 0 0 2em;
+}
+.targetas h2{
+	font-size: 60px;
+}
 .btn-danger {
 	border: solid #62a8ea 1px;
     padding: 0.8em 1.5em;
