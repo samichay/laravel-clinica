@@ -20,6 +20,8 @@ Route::resource('paciente','PacienteController');
 Route::resource('insumo','InsumosController');
 Route::resource('atencion','AtencionController');
 
+Route::resource('usuario','UsuariosController');
+
 
 
 
@@ -34,8 +36,8 @@ Route::resource('atencion','AtencionController');
 //------------------------------------------------------------------------
 
 
-Route::get('usuario', 'UsuarioControlador@index');
-Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');
+/*Route::get('usuario', 'UsuarioControlador@index');
+Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');*/
 
 Route::auth();
 Route::get('/home', 'HomeController@index');

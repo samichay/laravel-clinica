@@ -7,7 +7,7 @@
 </div>
 @endif
 
-@section('body')
+@section('body')    
 <h1>Registro de insumos</h1>
 <br>
     <a href="#modalregistroinsumo" type="button" class="btn-primario">+ Nuevo insumo</a>    
@@ -44,6 +44,8 @@
     </div>
 
 </center>
+    </div>
+    </div>
 
 <!-- inicio del modal -->
 <div id="modalregistroinsumo" class="modalDialog">
