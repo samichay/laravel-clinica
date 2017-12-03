@@ -12,6 +12,7 @@
 
 	<body>
         <!-- inicio del menu lateral-->
+        <script src="js/main.js"></script>
 		<div id="barra-lateral">
 			<div id="logo-menu">
 			</div>
@@ -26,7 +27,7 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">assignment_turned_in</i>
-					<li><a href="paciente" class="title-menu">Registro</a><li>
+					<li><a href="#" class="title-menu" onclick="Desplegar()">Registro</a><li>
 				</div>
 			</div>
 			<div id="menu--desplegable1">
@@ -75,6 +76,9 @@
 				</div>
 			</div>
 		</div>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	</body>
         <!-- fin del menu lateral -->
  
         <body>
