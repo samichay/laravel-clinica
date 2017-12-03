@@ -27,7 +27,8 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'inicio';
+
 
     /**
      * Create a new authentication controller instance.
@@ -46,7 +47,7 @@ class AuthController extends Controller
 
     protected function getFailedLoginMessage()
     {
-        return 'Estas credenciales no coinciden en nuestro registro';
+        return 'Datos incorrectos';
     }
 
     /**
