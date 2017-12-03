@@ -10,7 +10,7 @@ div#barra-lateral{
 }
 
 div#barra-lateral:hover{
-	width:190px;
+	width:200px;
 }
 
 div#logo-menu{
@@ -42,6 +42,10 @@ div.contenedor-logos{
 .logo i{
 	margin: 0 0 0 20px;
 	color: rgba(163,175,183,.9);
+}
+
+.logo li a {
+	display:block;
 }
 
 .title-menu{
@@ -90,8 +94,31 @@ img#foto-contenedor-1{
 }
 #menu--desplegable1{
 	margin: 0 0 0 2em;
+	display:none;
 }
 
+
+#menu--desplegable1 .contenedor-logos .logo li{
+	margin: 0 0 0 40px;
+}
+
+#menu--desplegable2{
+	margin: 0 0 0 2em;
+	display:none;
+}
+
+#menu--desplegable2 .contenedor-logos .logo li{
+	margin: 0 0 0 40px;
+}
+
+#menu--desplegable3{
+	margin: 0 0 0 2em;
+	display:none;
+}
+
+#menu--desplegable3 .contenedor-logos .logo li{
+	margin: 0 0 0 40px;
+}
 
 
 

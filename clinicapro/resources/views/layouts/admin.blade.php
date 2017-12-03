@@ -12,6 +12,7 @@
 
 	<body>
         <!-- inicio del menu lateral-->
+        <script src="js/main.js"></script>
 		<div id="barra-lateral">
 			<div id="logo-menu">
 			</div>
@@ -26,7 +27,7 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">assignment_turned_in</i>
-					<li><a href="paciente" class="title-menu">Registro</a><li>
+					<li><a href="#" class="title-menu" onclick="Desplegar()">Registro</a><li>
 				</div>
 			</div>
 			<div id="menu--desplegable1">
@@ -49,10 +50,10 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">local_library</i>
-					<a href="#" class="title-menu">Atencion</a>
+					<a href="#" class="title-menu" onclick="Desplegar2()">Atencion</a>
 				</div>
 			</div>
-			<div id="menu--desplegable1">
+			<div id="menu--desplegable2">
 				<div class="contenedor-logos">
 					<div class="logo">
 						<li><a href="#" class="title-menu">Completada</a><li>
@@ -73,10 +74,10 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">content_paste</i>
-					<a href="#" class="title-menu">Reportes</a>
+					<a href="#" class="title-menu" onclick="Desplegar3()">Reportes</a>
 				</div>
 			</div>
-			<div id="menu--desplegable1">
+			<div id="menu--desplegable3">
 				<div class="contenedor-logos">
 					<div class="logo">
 						<li><a href="#" class="title-menu">Historial</a><li>
@@ -112,6 +113,9 @@
 				</div>
 			</div>
 		</div>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	</body>
         <!-- fin del menu lateral -->
  
         <body>
