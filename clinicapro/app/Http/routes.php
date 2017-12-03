@@ -21,8 +21,6 @@ Route::resource('insumo','InsumosController');
 Route::resource('atencion','AtencionController');
 
 
-
-
 //----------------fin paciete
 //------------------------------------------------------------------------
 //----------------inicio usuario
@@ -37,9 +35,19 @@ Route::resource('atencion','AtencionController');
 Route::get('usuario', 'UsuarioControlador@index');
 Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');
 
-Route::auth();
+
+// Authentication Routes...
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::post('login', 'Auth\AuthController@login');
+Route::get('logout', 'Auth\AuthController@logout');
+// Registration Routes...
+Route::get('register', 'Auth\AuthController@showRegistrationForm');
+Route::post('register', 'Auth\AuthController@register');
+
 Route::get('/home', 'HomeController@index');
+Route::get('inicio', 'HomeController@inicio');
 
 Route::get('/', function () {
     return view('main');
 });
+

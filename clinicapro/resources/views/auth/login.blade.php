@@ -1,66 +1,69 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
+    <title>Login</title>
+</head>
 
-                        <div class="form-group{{ $errors->has('nick') ? ' has-error' : '' }}">
-                            <label for="nick" class="col-md-4 control-label">Nick</label>
-
-                            <div class="col-md-6">
-                                <input id="nick" type="text" class="form-control" name="nick" value="{{ old('nick') }}">
-
-                                @if ($errors->has('nick'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('nick') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Recuerdame
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i> Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Olvidaste tu clave giancarlito?</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<body class="b-login">
+        <div class="iniciar">
+        @if ($errors->has('nick'))
+        <div id="esconder" class="alertlogin alert-danger alert-dismissible" role="alert">
+            <span>
+                <strong>{{ $errors->first('nick') }}</strong>
+            </span>
             </div>
+        @endif
+
+        @if ($errors->has('password'))
+        <div id="esconder" class="alertlogin alert-danger alert-dismissible" role="alert">
+        <span>
+            <strong>{{ $errors->first('password') }}</strong>
+        </span>
         </div>
-    </div>
-</div>
-@endsection
+        @endif
+            <form  role="form" method="POST" action="{{ url('/login') }}">
+                {{ csrf_field() }}
+                <div class="iniciar--title">
+                    <h2>SIEMPRE MUJER</h2>
+                    <span>Consultorio obstetrico</span>
+                </div>
+                <br>
+                <div class="iniciar--campo{{ $errors->has('nick') ? ' has-error' : '' }}">
+                    <label for="nick"> <h5>Nick</h5> </label>
+                        <div class="col-md-6">
+                        <input id="nick" type="text" class="iniciar--input" name="nick" value="{{ old('nick') }}">
+                        
+                        </div>
+                </div>
+                
+                <br>
+                
+                <div class="iniciar--campo{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <label for="password"><h5>Password</h5></label>
+
+                    <div class="col-md-6">
+                        <input id="password" type="password" class="iniciar--input" name="password">
+                    </div>
+                </div>
+                
+                <br>
+                
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <button type="submit" class="btn-principal">
+                            <!-- <i class="fa fa-btn fa-sign-in"></i> --> Login
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+</body>
+
+</html>
