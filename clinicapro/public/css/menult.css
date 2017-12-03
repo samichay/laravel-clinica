@@ -102,7 +102,23 @@ img#foto-contenedor-1{
 	margin: 0 0 0 40px;
 }
 
+#menu--desplegable2{
+	margin: 0 0 0 2em;
+	display:none;
+}
 
+#menu--desplegable2 .contenedor-logos .logo li{
+	margin: 0 0 0 40px;
+}
+
+#menu--desplegable3{
+	margin: 0 0 0 2em;
+	display:none;
+}
+
+#menu--desplegable3 .contenedor-logos .logo li{
+	margin: 0 0 0 40px;
+}
 
 
 
