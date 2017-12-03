@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Insumos;
-use App\Http\Requests;
-use App\Http\Requests\InsumosUpdateRequest;
+use App\Models\Usuario;
 use Session;
 use Redirect;
+use App\Http\Requests;
 
-class InsumosController extends Controller
+class UsuariosController extends Controller
 {
      public function __construct(){
      $this->middleware('auth');
@@ -19,10 +18,11 @@ class InsumosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $insumos = Insumos::Paginate(20);
-        return view('insumo.index',['insumos'=>$insumos]);
+
+        $usuarios = Usuario::nombre($request->get('name'))->Paginate(3);
+        return view('usuario.index',['usuarios'=>$usuarios]);
     }
 
     /**
@@ -43,13 +43,14 @@ class InsumosController extends Controller
      */
     public function store(Request $request)
     {
-        $insumos =new Insumos();
-        $insumos -> nombre =$request -> nombre;
-        $insumos -> stock =$request -> stock;
-        $insumos -> descripcion =$request -> descripcion;
-        $insumos -> save();
-        Session::flash('message','Insumo Creado Correctamente');
-        return Redirect::to('/insumo');
+        $usuarios =new Usuario();
+        $usuarios -> nombres =$request -> nombres;
+        $usuarios -> apellidos =$request -> apellidos;
+        $usuarios -> nick =$request -> nick;
+        $usuarios -> tipo_usuario =$request -> tipo_usuario;
+        $usuarios -> save();
+        Session::flash('message','Usuario Creado Correctamente');
+        return Redirect::to('/usuario');
     }
 
     /**
@@ -57,8 +58,8 @@ class InsumosController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+     *//*
+*/    public function show($id)
     {
 
     }
@@ -71,8 +72,8 @@ class InsumosController extends Controller
      */
     public function edit($id)
     {
-        $insumo = Insumos::find($id);
-        return view('insumo.edit_insumo',['insumo'=>$insumo]);
+     /*   $insumo = Insumos::find($id);
+        return view('insumo.edit_insumo',['insumo'=>$insumo]);*/
     }
 
     /**
@@ -84,11 +85,11 @@ class InsumosController extends Controller
      */
     public function update(InsumosUpdateRequest $request, $id)
     {
-        $insumo = Insumos::find($id);
+        /*$insumo = Insumos::find($id);
         $insumo->fill($request->all());
         $insumo->save();
         Session::flash('message','Usuario Actualizado Correctamente');
-        return Redirect::to('/insumo');
+        return Redirect::to('/insumo');*/
     }
 
     /**
@@ -100,8 +101,8 @@ class InsumosController extends Controller
     public function destroy($id)
     {
         
-        Insumos::destroy($id);
+        /*Insumos::destroy($id);
         Session::flash('message','Insumo Eliminado Correctamente');
-        return Redirect::to('/insumo');
+        return Redirect::to('/insumo');*/
     }
 }

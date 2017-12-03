@@ -1,13 +1,20 @@
 @extends('layouts/admin')
 
-@if(Session::has('message'))
+@if(Session::has('message')) 
 <div class="alert alert-success alert-dismissable" role="alert">
 	<a href="/paciente" class="close3" data-dismiss="alert" aria-label="close">&times;</a>
  {{Session::get('message')}}
 </div>
 @endif
 @section('body')
-            	<h3 class="contenido--titulo">
+	{!!Form::open(['route' => 'paciente.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+	  <div class="form-group">
+	  	{!! Form::text('name', null, ['class' => 'form-control', 'placeholder'=> 'Nombre de paciente'])!!}
+	  </div>
+	  <button type="submit" class="btn btn-default">Buscar</button>
+	{!! Form::close() !!}
+	
+	        	<h3 class="contenido--titulo">
                     Registro de Pacientes
                 </h3>
                 <br><br>

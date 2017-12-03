@@ -25,6 +25,13 @@ class Usuario extends Model implements Authenticatable
     ];
 
 
+    public function scopeNombre($query,$name)
+    {
+        if(trim($name) != "")
+        {
+            $query->where(\DB::raw("CONCAT(nombres,' ',apellidos)"),"LIKE","%$name%");
+        }
+    }
 //    Puede servir pa comprobar algun campo del usuario
 /*	public function isAdmin()
 	{
