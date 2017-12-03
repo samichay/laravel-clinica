@@ -20,9 +20,9 @@ class PacienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pacientes = Paciente::Paginate(20);
+        $pacientes = Paciente::nombre($request->get('name'))->Paginate(20);
         return view('registrop',['pacientes'=>$pacientes]);
     }
 
