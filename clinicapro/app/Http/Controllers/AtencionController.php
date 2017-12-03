@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Atencion;
 use App\Http\Requests;
+use Session;
+use Redirect;
 
 class AtencionController extends Controller
 {
@@ -41,7 +42,15 @@ class AtencionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $atencion =new Atencion();
+        $atencion -> id_paciente =$request -> id_paciente;
+        $atencion -> id_tipo =$request -> id_tipo;
+        $atencion -> precio =$request -> precio;
+        $atencion -> observaciones =$request -> observaciones;
+        $atencion -> id_usuario =$request -> id_usuario;
+        $atencion -> save();
+        Session::flash('message','Atención creada Correctamente');
+        return Redirect::to('/atencion');
     }
 
     /**

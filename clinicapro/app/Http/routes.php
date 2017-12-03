@@ -50,4 +50,3 @@ Route::get('inicio', 'HomeController@inicio');
 Route::get('/', function () {
     return view('main');
 });
-
