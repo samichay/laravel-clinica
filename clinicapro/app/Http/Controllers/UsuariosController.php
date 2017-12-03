@@ -18,9 +18,10 @@ class UsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $usuarios = Usuario::Paginate(3);
+
+        $usuarios = Usuario::nombre($request->get('name'))->Paginate(3);
         return view('usuario.index',['usuarios'=>$usuarios]);
     }
 
