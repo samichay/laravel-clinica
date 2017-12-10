@@ -20,7 +20,7 @@
 			<div id="contenedor-logos-primero" class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">dns</i>
-					<a href="#" class="title-menu">Inicio</a>
+					<a href="/inicio" class="title-menu">Inicio</a>
 				</div>
 			</div>
 
