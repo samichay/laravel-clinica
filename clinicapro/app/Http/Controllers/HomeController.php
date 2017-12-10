@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Models\Usuario;
+use App\Models\Atencion;
+use App\Models\Paciente;
+use App\Models\Insumos;
+
 class HomeController extends Controller
 {
     /**
@@ -29,7 +34,21 @@ class HomeController extends Controller
     
     public function inicio()
     {
-        return view('inicio');
+        $usuarios = Usuario::all();
+        $atenciones = Atencion::all();
+        $pacientes = Paciente::all();
+        $insumos = Insumos::all();
+    
+        $usuarios= $usuarios->count();
+        $atenciones=$atenciones->count();
+        $pacientes=$pacientes->count();;
+        $insumos=$insumos->count();
+    
+        return view('inicio')
+            ->with('usuarios', $usuarios)
+            ->with('atenciones', $atenciones)
+            ->with('pacientes', $pacientes)
+            ->with('insumos', $insumos);
     }
 
 }

@@ -121,7 +121,36 @@ table{
 	border-radius: 50px;
 }
 .close:hover { background: #00d9ff; }
-
+.targetas{
+	display: flex;
+	justify-content: space-around;
+}
+.targeta-uno{
+	background: #2e9ff3;
+	padding: 2em 1em;
+	width: 10em;
+    text-align: center;
+	display: table;
+	color: white;
+}
+.targeta-uno:hover{
+	background: #2077b6;
+}
+.targeta-dos{
+	background: #ec7179;
+	width: 10em;
+    padding: 2em 1em;
+    text-align: center;
+	display: table;
+	color: white;
+	margin: 0 0 0 2em;
+}
+.targeta-dos:hover{
+	background: #b15258;
+}
+.targetas h2{
+	font-size: 60px;
+}
 .btn-danger {
 	border: solid #62a8ea 1px;
     padding: 0.8em 1.5em;
