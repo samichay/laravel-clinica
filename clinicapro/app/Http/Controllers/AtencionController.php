@@ -7,7 +7,6 @@ use App\Models\Atencion;
 use App\Http\Requests;
 use Session;
 use Redirect;
-
 class AtencionController extends Controller
 {
     /**
@@ -17,12 +16,16 @@ class AtencionController extends Controller
      */
     public function index()
     {
-        
-        $atenciones = Atencion::Paginate(20);
-        /*$atenciones= Atencion::with('paciente');*/
-
+        $atenciones=Atencion::Paginate(20)->usuario();
+        /*$atenciones = Atencion::Paginate(20);
+        *//*$atenciones= Atencion::with('paciente');*/
+/*        $paciente=$atenciones->usuario();
+*/
         return view('atencion.index',['atenciones'=>$atenciones]);
-    }
+        
+/*        return view('atencion.index')
+        ->with('atenciones'=>$atenciones);
+*/    }
 
     /**
      * Show the form for creating a new resource.
