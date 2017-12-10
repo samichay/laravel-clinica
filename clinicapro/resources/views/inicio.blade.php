@@ -2,17 +2,21 @@
 
 @section('body')
 <div class="targetas">
-    <a href="#" class="targeta-uno">
-        <h2>[{$papanicolao:1}]</h2>
-        <p>Citas pendientes</p>
+    <a href="/usuario" class="targeta-uno">
+        <h2>{{$usuarios}}</h2>
+        <p>Usuarios</p>
     </a>
-    <a href="#" class="targeta-dos">
-        <h2>09</h2>
-        <p>Papanicolao</p>
+    <a href="/atencion" class="targeta-dos">
+        <h2>{{$atenciones}}</h2>
+        <p>Atenciones</p>
     </a>
-    <a href="#" class="targeta-uno targeta-dos">
-        <h2>03</h2>
-        <p>Planificacion Familiar</p>
+    <a href="/paciente" class="targeta-uno targeta-dos">
+        <h2>{{$pacientes}}</h2>
+        <p>Pacientes</p>
+    </a>
+    <a href="/insumo" class="targeta-uno targeta-dos">
+        <h2>{{$insumos}}</h2>
+        <p>Insumos</p>
     </a>
 </div>
 @endsection
