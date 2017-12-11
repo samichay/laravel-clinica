@@ -95,7 +95,7 @@
 			<div id="menu--desplegable3">
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="/reportes" class="title-menu">Historial</a><li>
+						<li><a href="/reportes" class="title-menu">General</a><li>
 					</div>
 				</div>
 				<div class="contenedor-logos">

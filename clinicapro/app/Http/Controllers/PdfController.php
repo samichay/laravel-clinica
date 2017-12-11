@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Paciente;
+use App\Models\Insumos;
 /*use App\Pais;*/
 
 
@@ -19,7 +20,7 @@ class PdfController extends Controller
      */
     public function index()
     {
-        return view("pdf.listado_reportes");
+        return view("pdf.listado_reportes1");
     }
 
 
@@ -27,6 +28,7 @@ class PdfController extends Controller
     {
 
         $data = $datos;
+
         $date = date('Y-m-d');
         $view =  \View::make($vistaurl, compact('data', 'date'))->render();
         $pdf = \App::make('dompdf.wrapper');
@@ -34,6 +36,8 @@ class PdfController extends Controller
         
         if($tipo==1){return $pdf->stream('reporte');}
         if($tipo==2){return $pdf->download('reporte.pdf'); }
+        if($tipo==3){return $pdf->stream('reporte.pdf'); }
+
     }
 
 
@@ -42,12 +46,31 @@ class PdfController extends Controller
      $vistaurl="pdf.reporte_pacientes";
      $pacientes=Paciente::all();
      
+     
      return $this->crearPDF($pacientes, $vistaurl,$tipo);
 
 
 
 
     }
+
+    public function crear_reporte_insumos($tipo){
+
+        $vistaurl="pdf.reporte_insumos";
+        $insumos=Insumos::all();
+
+        return $this->crearPDF($insumos, $vistaurl, $tipo);
+
+    }
+
+    public function crear_reporte_insumos_privado($tipo,$filtro){
+        
+        $vistaurl="pdf.reporte_insumos";
+        $insumos=Insumos::where('id_insumos' ,'=',$filtro)->get();
+
+        return $this->crearPDF($insumos, $vistaurl, $tipo);
+
+    }    
 
 
 
