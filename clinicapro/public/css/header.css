@@ -112,6 +112,23 @@ a{
     color: rgb(213, 8, 107);
     margin: 0 8px;
 }
+footer{
+    background: rgb(27, 27, 27);
+    padding: 2em 0;
+    text-align: center;
+}
+footer a{
+    margin: 5px 15px;
+    color: white; 
+}
+footer a:hover{
+    color: rgb(213, 8, 107);    
+}
+footer p{
+ margin:  15px 0 -5px 0;
+ font-size: 15px;
+ color: rgb(213, 8, 107);
+}
 
 @media(min-width:750px){
     header{

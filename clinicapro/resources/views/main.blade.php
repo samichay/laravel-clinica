@@ -57,6 +57,16 @@
 			</div>
 		</div>
 	</section>	
+	<footer>
+		<div>
+			<a href="#">Inicio</a>
+			<a href="#">Servicio</a>
+			<a href="#">Doctores</a>
+			<a href="#">Especialidad</a>
+			<a href="#">Contactenos</a>
+		</div>
+		<p>Desarollado por samichay-UNJBG</p>
+	</footer>
 
 </body>
 </html>
