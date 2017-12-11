@@ -5,12 +5,29 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<link rel="stylesheet" type="text/css" href="{{asset('css/menult.css')}}" >
         <link rel="stylesheet" href="{{asset('css/base.css')}}">
-        <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-		{{-- <script type="text/javascript" src={{asset('boostrap.min.js')}}></script>--}}        
-		<link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('css/admin.css')}}">
+		<link rel="stylesheet" href="{{asset('css/header.css')}}">
+		<script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src={{asset('header.js')}}></script>
+        <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
+
 	</head>
 
 	<body>
+		<!-- inicio header-->
+		<header class="header">
+			<div class="wrapper">
+				<div class="logogc">Siempre Mujer</div>
+					<div class="usuariogc">{{ Auth::user()->nick }}</div>
+					<nav>
+					<a href="{{ url('/logout') }}">Salir</a>
+					</nav>
+			</div>
+		</header>
+		<!-- fin header-->
+		
         <!-- inicio del menu lateral-->
         <script src="js/main.js"></script>
 		<div id="barra-lateral">
@@ -20,7 +37,7 @@
 			<div id="contenedor-logos-primero" class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">dns</i>
-					<a href="#" class="title-menu">Inicio</a>
+					<a href="/inicio" class="title-menu">Inicio</a>
 				</div>
 			</div>
 
@@ -80,7 +97,7 @@
 			<div id="menu--desplegable3">
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="#" class="title-menu">Historial</a><li>
+						<li><a href="/reportes" class="title-menu">Historial</a><li>
 					</div>
 				</div>
 				<div class="contenedor-logos">
@@ -132,13 +149,35 @@
         	Para modificar personalizadamente alguna vista  se hace con @section ... @show y @section e @endsection en la vista--}}
         	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-
 			<script type="text/javascript">
-
-			      $("#id_usuario").select2({
-			            allowClear: true
+			      $("#id_paciente").select2({
+			           placeholder: "Escoja un paciente",
+			           allowClear: true
 			        });
 			</script>
+			<script type="text/javascript">
+			function veroferta(sel){
+			switch (sel) {
+			  case '1': //Papanicolao
+				document.getElementById('formpapanicolao').style.display = 'inline';
+				document.getElementById('formpfamilia').style.display = 'none';
+				document.getElementById('formotros').style.display = 'none';
+				break;
+			  case '2': //Otros
+				document.getElementById('formpapanicolao').style.display = 'none';
+				document.getElementById('formpfamilia').style.display = 'none';
+				document.getElementById('formotros').style.display = 'inline';
+			    break;
+			  case '3': //PFamiliar
+				document.getElementById('formpapanicolao').style.display = 'none';
+				document.getElementById('formpfamilia').style.display = 'inline';
+				document.getElementById('formotros').style.display = 'none';
+		    	break;
+			  default:
+			    break;
+			}
 
+			}
+			</script>
 
         </body>

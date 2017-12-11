@@ -3,28 +3,56 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Insumos;
-use App\Http\Requests;
-use App\Http\Requests\InsumosUpdateRequest;
-use Session;
-use Redirect;
 
-class InsumosController extends Controller
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Models\Paciente;
+/*use App\Pais;*/
+
+
+class PdfController extends Controller
 {
-     public function __construct(){
-     $this->middleware('auth');
-    }
-    /**s
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $insumos = Insumos::nombre($request->get('nombre'))
-        ->Paginate(20);
-        return view('insumo.index',['insumos'=>$insumos]);
+        return view("pdf.listado_reportes");
     }
+
+
+      public function crearPDF($datos,$vistaurl,$tipo)
+    {
+
+        $data = $datos;
+        $date = date('Y-m-d');
+        $view =  \View::make($vistaurl, compact('data', 'date'))->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        
+        if($tipo==1){return $pdf->stream('reporte');}
+        if($tipo==2){return $pdf->download('reporte.pdf'); }
+    }
+
+
+    public function crear_reporte_pacientes($tipo){
+
+     $vistaurl="pdf.reporte_pacientes";
+     $pacientes=Paciente::all();
+     
+     return $this->crearPDF($pacientes, $vistaurl,$tipo);
+
+
+
+
+    }
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -33,7 +61,7 @@ class InsumosController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -44,13 +72,7 @@ class InsumosController extends Controller
      */
     public function store(Request $request)
     {
-        $insumos =new Insumos();
-        $insumos -> nombre =$request -> nombre;
-        $insumos -> stock =$request -> stock;
-        $insumos -> descripcion =$request -> descripcion;
-        $insumos -> save();
-        Session::flash('message','Insumo Creado Correctamente');
-        return Redirect::to('/insumo');
+        //
     }
 
     /**
@@ -61,7 +83,7 @@ class InsumosController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -72,8 +94,7 @@ class InsumosController extends Controller
      */
     public function edit($id)
     {
-        $insumo = Insumos::find($id);
-        return view('insumo.edit_insumo',['insumo'=>$insumo]);
+        //
     }
 
     /**
@@ -83,13 +104,9 @@ class InsumosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(InsumosUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $insumo = Insumos::find($id);
-        $insumo->fill($request->all());
-        $insumo->save();
-        Session::flash('message','Usuario Actualizado Correctamente');
-        return Redirect::to('/insumo');
+        //
     }
 
     /**
@@ -100,9 +117,6 @@ class InsumosController extends Controller
      */
     public function destroy($id)
     {
-        
-        Insumos::destroy($id);
-        Session::flash('message','Insumo Eliminado Correctamente');
-        return Redirect::to('/insumo');
+        //
     }
 }

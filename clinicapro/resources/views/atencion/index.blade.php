@@ -8,7 +8,7 @@
 @section('body')
     {!!Form::open(['route' => 'atencion.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
       <div class="form-group">
-        {!! Form::text('precio', null, ['class' => 'form-control', 'placeholder'=>'Precio'])!!}
+        {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Precio'])!!}
       </div>
       <button type="submit" class="btn btn-default">Buscar</button>
     {!! Form::close() !!}
@@ -37,9 +37,10 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $cont=1;?>
             	@foreach ($atenciones as $key => $atencion)
 					<tr class="tabla--datos-fila">
-						<th scope="row">{{$atencion->id_atencion}}</th>
+						<th scope="row">{{$cont}}</th>
 						<td>{{$atencion->fecha_atencion}}</td>
 						<td>{{$atencion->hora_atencion}}</td>
 						<td>{{$atencion->observaciones}}	</td>
@@ -50,6 +51,7 @@
 						<td>{!!link_to_route('atencion.edit', $title = 'Edit', $parameters = $atencion, $attributes = ['class'=>'btn-primario'])!!}
                         </td>
 					</tr>
+                    <?php $cont++;?>
 				@endforeach
             </tbody>
         </table>
@@ -60,7 +62,7 @@
 </center>
 </div>
 </div>
-<div id="modalregistroatencion" class="modalDialog">
+<div  id="modalregistroatencion" class="modalDialog">
 @include('request')
     <div>
         {!!Form::open(['route'=>'atencion.store', 'method'=>'POST'])!!}   
@@ -70,35 +72,79 @@
         <h6>(*) Campos obligatorios</h6>
         <br>
         <div>
-            <h5>{!!Form::label('id_usuario','(*) Usuario:')!!}</h5>
-            {!!Form::select('id_usuario',$nombre_users,['id'=>'nameid2'])!!}
-        </div>
-        <br>
-        {{-- <div>
-            <h5>{!!Form::label('id_paciente','(*) Paciente:')!!}</h5>
-            {!!Form::text('id_paciente',null,['id'=>'nameid','class'=>'input--formulario','placeholder'=>'Paciente'])!!}
-        </div> 
-         --}}
-         <div>
-            <h5>{!!Form::label('id_paciente','(*) Paciente:')!!}</h5>
-            {!!Form::select('id_paciente',$nombre_pac,['id'=>'nameid','class'=>'input--formulario'])!!}
-        </div>
-        <br>
-        <div>
             <h5>{!!Form::label('id_tipo','(*) Tipo:')!!}</h5>
-            {!!Form::select('id_tipo', $tipo_atenciones, null,['class'=>'input--formulario'])!!}
+            {!!Form::select('id_tipo', $tipo_atenciones, 2,['class'=>'input--formulario','onchange'=>'veroferta(this.value)'])!!}
+        </div>
+        <br>
+        <div >
+            <h5>{!!Form::label('id_paciente','(*) Paciente:')!!}</h5>
+            {!!Form::select('id_paciente',$nombre_pac)!!}
         </div>
         <br>
         <div>
             <h5>{!!Form::label('precio','Precio:')!!}</h5>
-            {!!Form::text('precio',null,['class'=>'input--formulario','placeholder'=>'Precio'])!!}
+            {!!Form::number('precio',null,['class'=>'input--formulario','placeholder'=>'Precio'])!!}
         </div>
+    <div id="formotros">
         <br>
+                <h5>{!!Form::label('descripcion','Descripcion:')!!}</h5>
+                {!!Form::text('descripcion',null,['class'=>'input--formulario','placeholder'=>'Ingrese la descripcion '])!!}
+                
+    </div> <br>
+    <div id="formpapanicolao" style="display: none;">
+        <div>
+            <h5>{!!Form::label('id_muestra','Muestra:')!!}</h5>
+            {!!Form::select('id_muestra',$tipo_muestra,null,['class'=>'input--formulario'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('hijos','Hijos:')!!}</h5>
+            {!!Form::number('hijos',null,['class'=>'input--formulario','placeholder'=>'Hijos'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('fecha_entrega','Fecha de entrega:')!!}</h5>
+            {!!Form::date('fecha_entrega',null,['class'=>'input--formulario','placeholder'=>'Fecha de entrega'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('fecha_recepcion','Fecha de recepcion:')!!}</h5>
+            {!!Form::date('fecha_recepcion',null,['class'=>'input--formulario','placeholder'=>'Fecha de recepcion'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('fecha_envio','Fecha de Envio:')!!}</h5>
+            {!!Form::date('fecha_envio',null,['class'=>'input--formulario','placeholder'=>'Fecha de Envio'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('estado','Estado:')!!}</h5>
+            {!!Form::select('estado',['Disponible','Entregado','No Entregado'],null,['class'=>'input--formulario'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('laboratorio','Laboratorio:')!!}</h5>
+            {!!Form::text('laboratorio',null,['class'=>'input--formulario','placeholder'=>'Laboratorio'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('fecha_periodo','Fecha de Periodo:')!!}</h5>
+            {!!Form::date('fecha_periodo',null,['class'=>'input--formulario','placeholder'=>'Fecha de Periodo'])!!}
+        </div>        <br>
+</div>
+
+<div id="formpfamilia" style="display: none;">
+        <div>
+            <h5>{!!Form::label('id_Metodo','Metodo:')!!}</h5>
+            {!!Form::select('id_Metodo',$tipo_metodo,null,['class'=>'input--formulario'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('id_Estado','Estado:')!!}</h5>
+            {!!Form::select('id_Estado',$tipo_estado,null,['class'=>'input--formulario'])!!}
+        </div>        <br>
+        <div>
+            <h5>{!!Form::label('fecha_programada','Fecha Programada:')!!}</h5>
+            {!!Form::date('fecha_programada',null,['class'=>'input--formulario','placeholder'=>'Fecha Programada'])!!}
+        </div>        <br>
+</div>
         <div>
             <h5>{!!Form::label('observaciones','Observaciones:')!!}</h5>
             {!!Form::textarea('observaciones',null,['class'=>'input--formulario','placeholder'=>'Ingrese las observaciones... '])!!}
         </div>
-        <br>
+         <br>
         {!!Form::submit('Agregar',['class'=>'btn-primario'])!!}
 		{!!Form::close()!!}
     </div>

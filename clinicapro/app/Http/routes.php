@@ -37,7 +37,7 @@ Route::resource('usuario','UsuariosController');
 Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');*/
 
 
-// Authentication Routes...
+// Authenticatio    n Routes...
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
@@ -53,6 +53,6 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/tarea', function () {
-    return view('prueba');
-});
+
+Route::get('reportes','PdfController@index');
+Route::get('crear_reporte_pacientes/{tipo}','PdfController@crear_reporte_pacientes');

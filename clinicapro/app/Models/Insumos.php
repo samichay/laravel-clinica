@@ -11,4 +11,10 @@ class Insumos extends Model
     protected $primaryKey = 'id_insumos';
     protected $fillable = ['nombre','stock','descripcion'];
     public $timestamps =false;
+
+    public function scopeNombre($query,$nombre)
+    {        
+        $query->where('nombre',"LIKE","%$nombre%");
+
+    }
 }

@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,600i,700,700i,800');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+section img{
+    margin-top: -75px;
+    width: 100%;
+    
+}
+
+.banner{
+    margin-top: 15%;
+    width: 50%;
+    position: absolute;
+   
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    margin-left: 25%;
+    
+    padding: 15px;
+}
+
+.banner p{
+    margin: 10px auto;
+    color: white;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    font-size: 55px;
+    font-weight: inherit;
+}
+.banner p a{
+    color: rgb(213, 8, 107);
+}
+.banner--textb{
+    color: rgb(213, 8, 107);
+    font-weight: bolder;
+    margin: 0 14px;
+
+}
+
+.contac{
+    margin: 4em 0 0 0;
+    color: rgb(213, 8, 107);
+    font-weight: bolder;
+    padding: 0.7em 2em;
+    border: 1px solid rgb(213, 8, 107);
+    border-radius: 10px;
+}
+.contac:hover{
+    background: white;
+    border: 1px solid white;
+}

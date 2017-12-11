@@ -1,5 +1,4 @@
 @extends('layouts/admin')
-
 @if(Session::has('message'))
 <div class="alert alert-success alert-dismissable" role="alert">
     <a href="/insumo" class="close3" data-dismiss="alert" aria-label="close">&times;</a>
@@ -7,7 +6,13 @@
 </div>
 @endif
 
-@section('body')    
+@section('body')   
+    {!!Form::open(['route' => 'insumo.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+      <div class="form-group">
+        {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Nombre del insumo'])!!}
+      </div>
+      <button type="submit" class="btn btn-default">Buscar</button>
+    {!! Form::close() !!} 
 <h1>Registro de insumos</h1>
 <br>
     <a href="#modalregistroinsumo" type="button" class="btn-primario">+ Nuevo insumo</a>    
