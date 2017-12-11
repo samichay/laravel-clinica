@@ -38,7 +38,7 @@ Route::resource('usuario','UsuariosController');
 Route::get('usuario/id/{id}', 'UsuarioControlador@datos_usuario') ->where('id', '[1-9]+');*/
 
 
-// Authentication Routes...
+// Authenticatio    n Routes...
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
