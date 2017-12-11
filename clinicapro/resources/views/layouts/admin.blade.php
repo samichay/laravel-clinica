@@ -3,11 +3,11 @@
 	<head>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<link rel="stylesheet" type="text/css" href="{{asset('css/menult.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{asset('css/menult.css')}}" >
         <link rel="stylesheet" href="{{asset('css/base.css')}}">
         <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-        <script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
-        <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
+		{{-- <script type="text/javascript" src={{asset('boostrap.min.js')}}></script>--}}        
+		<link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
 	</head>
 
 	<body>
@@ -130,4 +130,15 @@
         	</div>
         	@show  
         	Para modificar personalizadamente alguna vista  se hace con @section ... @show y @section e @endsection en la vista--}}
+        	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+			<script type="text/javascript">
+
+			      $("#id_usuario").select2({
+			            allowClear: true
+			        });
+			</script>
+
+
         </body>

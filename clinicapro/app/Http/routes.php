@@ -19,7 +19,6 @@ Route::get('/pacientes/eliminar', 'PacienteController@delete');*/
 Route::resource('paciente','PacienteController');
 Route::resource('insumo','InsumosController');
 Route::resource('atencion','AtencionController');
-
 Route::resource('usuario','UsuariosController');
 
 
@@ -46,9 +45,14 @@ Route::get('logout', 'Auth\AuthController@logout');
 Route::get('register', 'Auth\AuthController@showRegistrationForm');
 Route::post('register', 'Auth\AuthController@register');
 
+
 Route::get('/home', 'HomeController@index');
 Route::get('inicio', 'HomeController@inicio');
 
 Route::get('/', function () {
     return view('main');
+});
+
+Route::get('/tarea', function () {
+    return view('prueba');
 });

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Atencion;
+use App\Models\Tipo_Atencion;
+use App\Models\Paciente;
+use App\Models\Usuario;
 use App\Http\Requests;
 use Session;
 use Redirect;
@@ -16,16 +19,12 @@ class AtencionController extends Controller
      */
     public function index()
     {
-        $atenciones=Atencion::Paginate(20)->usuario();
-        /*$atenciones = Atencion::Paginate(20);
-        *//*$atenciones= Atencion::with('paciente');*/
-/*        $paciente=$atenciones->usuario();
-*/
-        return view('atencion.index',['atenciones'=>$atenciones]);
-        
-/*        return view('atencion.index')
-        ->with('atenciones'=>$atenciones);
-*/    }
+        $atenciones=Atencion::orderBy('fecha_atencion','desc')->Paginate(20);
+        $tipo_atenciones=Tipo_Atencion::pluck('descripcion','id_tipo');
+        $nombre_pac=Paciente::pluck('nombres','id_paciente');
+        $nombre_users=Usuario::pluck('nick','id_usuario');
+        return view('atencion.index',compact('atenciones','tipo_atenciones','nombre_pac','nombre_users'));
+    }
 
     /**
      * Show the form for creating a new resource.

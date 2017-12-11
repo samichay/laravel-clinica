@@ -75,8 +75,4 @@
     </div>
 </div>
 <!-- fin del modal -->
-<<<<<<< HEAD
-
-=======
->>>>>>> 813ffbb16af4b94a195c1f9909d0a4010ba74e00
 @endsection

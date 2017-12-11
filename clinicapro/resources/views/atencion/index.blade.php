@@ -6,6 +6,12 @@
 </div>
 @endif
 @section('body')
+    {!!Form::open(['route' => 'atencion.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+      <div class="form-group">
+        {!! Form::text('precio', null, ['class' => 'form-control', 'placeholder'=>'Precio'])!!}
+      </div>
+      <button type="submit" class="btn btn-default">Buscar</button>
+    {!! Form::close() !!}
 <h1>Registro de atenciones</h1>
 <br>
 <br>
@@ -38,9 +44,9 @@
 						<td>{{$atencion->hora_atencion}}</td>
 						<td>{{$atencion->observaciones}}	</td>
 						<td>{{$atencion->precio}}	</td>
-						<td>{{$atencion->id_tipo}}	</td>
-						<td>{{$atencion->id_paciente}}	</td>
-						<td>{{$atencion->id_usuario}}	</td>
+                        <td>{{$atencion->tipoatencion->descripcion}}    </td>
+                        <td>{{$atencion->pacientes->nombres}}   </td>
+                        <td>{{$atencion->usuarios->nick}}    </td>
 						<td>{!!link_to_route('atencion.edit', $title = 'Edit', $parameters = $atencion, $attributes = ['class'=>'btn-primario'])!!}
                         </td>
 					</tr>
@@ -65,17 +71,22 @@
         <br>
         <div>
             <h5>{!!Form::label('id_usuario','(*) Usuario:')!!}</h5>
-            {!!Form::text('id_usuario',null,['class'=>'input--formulario','placeholder'=>'Usuario'])!!}
+            {!!Form::select('id_usuario',$nombre_users,['id'=>'nameid2'])!!}
         </div>
         <br>
-        <div>
+        {{-- <div>
             <h5>{!!Form::label('id_paciente','(*) Paciente:')!!}</h5>
-            {!!Form::text('id_paciente',null,['class'=>'input--formulario','placeholder'=>'Paciente'])!!}
+            {!!Form::text('id_paciente',null,['id'=>'nameid','class'=>'input--formulario','placeholder'=>'Paciente'])!!}
+        </div> 
+         --}}
+         <div>
+            <h5>{!!Form::label('id_paciente','(*) Paciente:')!!}</h5>
+            {!!Form::select('id_paciente',$nombre_pac,['id'=>'nameid','class'=>'input--formulario'])!!}
         </div>
         <br>
         <div>
             <h5>{!!Form::label('id_tipo','(*) Tipo:')!!}</h5>
-            {!!Form::text('id_tipo',null,['class'=>'input--formulario','placeholder'=>'Tipo de atención'])!!}
+            {!!Form::select('id_tipo', $tipo_atenciones, null,['class'=>'input--formulario'])!!}
         </div>
         <br>
         <div>
