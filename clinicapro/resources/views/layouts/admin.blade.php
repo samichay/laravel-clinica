@@ -5,12 +5,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<link rel="stylesheet" type="text/css" href="{{asset('css/menult.css')}}" />
         <link rel="stylesheet" href="{{asset('css/base.css')}}">
-        <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-        <script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
+		<link rel="stylesheet" href="{{asset('css/admin.css')}}">
+		<link rel="stylesheet" href="{{asset('css/header.css')}}">
+		<script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src={{asset('header.js')}}></script>
         <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
 	</head>
 
 	<body>
+		<!-- inicio header-->
+		<header class="header">
+			<div class="wrapper">
+				<div class="logogc">Siempre Mujer</div>
+					<div class="usuariogc">{{ Auth::user()->nick }}</div>
+					<nav>
+					<a href="{{ url('/logout') }}">Salir</a>
+					</nav>
+			</div>
+		</header>
+		<!-- fin header-->
+		
         <!-- inicio del menu lateral-->
         <script src="js/main.js"></script>
 		<div id="barra-lateral">
