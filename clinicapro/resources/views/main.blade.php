@@ -1,107 +1,40 @@
-<!doctype html>
-<html lang="es">
-	<head>
-		<title></title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<link rel="stylesheet" type="text/css" href="css/menult.css" />
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/admin.css">
-	</head>
-
-	<body>
-        <!-- inicio del menu lateral-->
-		<div id="barra-lateral">
-			<div id="logo-menu">
-			</div>
-
-			<div id="contenedor-logos-primero" class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Inicio</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Registro</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Consultas</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Reportes</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="login" class="title-menu">IniciarSesion?</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="logout" class="title-menu">Deslogear?</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Estadisticas</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
-					<a href="#" class="title-menu">Ayuda</a>	
-				</div>
-			</div>
-		</div>
-        <!-- fin del menu lateral -->
-        <!-- inicio del contenido -->
-        <div class="contenido">
-            <div class="contenido--tabla">
-                <center>
-                    <h2 class="contenido--titulo">
-                        ADMINISTRADORES
-                    </h2>
-                    <div class="tabla">
-                        <table class="tabla--datos">
-                            <thead class="titulo">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>Rol</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">1</td>
-                                    <td>Alvaro Anderson</td>
-                                    <td>Morales Caballero</td>
-                                    <td>Sistemas</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Efrain alex</td>
-                                    <td>Morales Caballero</td>
-                                    <td>Geotegnia</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+    <div class="cont-header">
+        
+	    <div class="logo">Siempre<span class="banner--textb">Mujer</span></div>
+	    <input type="checkbox" id="menu-bar">
+	    <label class="icon-menu ico" for="menu-bar"></label>
+	    <div class="menu">
+	        <div class="icon"><a href="#">Inicio</a></div>
+	        <div class="icon"><a href="#">Servicio</a></div>
+	        <div class="icon"><a href="#">Doctores</a></div>
+	        <div class="icon"><a href="#">Especialidad</a></div>
+	        <div class="icon"><a href="#">Contactenos</a></div>
+	    </div>
+	    
+    </div>
+	</header>
+	<section>
+        <img src="img/clinica.jpg" alt="">
+      
+            
+            <div class="banner">
+                <p>TU<span class="banner--textb">SALUD</span>ES</p>
+                <p>NUESTRA <span class="banner--textb">OBLIGACION</span></p>
+                <a  class="contac" href="#">Contactanos</a>
             </div>
-        </div>
-        <!-- finb del contenido -->
+  
+	</section>
 
-
-
-	</body>
+</body>
 </html>
