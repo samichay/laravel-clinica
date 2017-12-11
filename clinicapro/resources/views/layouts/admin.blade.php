@@ -17,11 +17,10 @@
 		<!-- inicio header-->
 		<header class="header">
 			<div class="wrapper">
-				<div class="logogc">Siempre Mujer</div>
-					<div class="usuariogc">{{ Auth::user()->nick }}</div>
-					<nav>
+				<div class="usuariogc">{{ Auth::user()->nick }}</div>
+				<nav>
 					<a href="{{ url('/logout') }}">Salir</a>
-					</nav>
+				</nav>
 			</div>
 		</header>
 		<!-- fin header-->
