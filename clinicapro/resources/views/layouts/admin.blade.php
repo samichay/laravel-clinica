@@ -117,13 +117,6 @@
 			</div>
 			<div class="contenedor-logos">
 				<div class="logo">
-					<i class="material-icons">trending_up</i>
-					<a href="#" class="title-menu">Estadisticas</a>
-				</div>
-			</div>
-
-			<div class="contenedor-logos">
-				<div class="logo">
 					<i class="material-icons">build</i>
 					<a href="#" class="title-menu">Ayuda</a>	
 				</div>

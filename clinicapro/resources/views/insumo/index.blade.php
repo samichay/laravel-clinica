@@ -6,16 +6,20 @@
 </div>
 @endif
 
-@section('body')   
-    {!!Form::open(['route' => 'insumo.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+@section('body')    
+<h3>Registro de insumos</h3>
+<br>
+<hr></hr>
+<br><br>
+<div class="btn--aciones">
+<a href="#modalregistroinsumo" type="button" class="btn-primario">+ Nuevo insumo</a>
+{!!Form::open(['route' => 'insumo.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
       <div class="form-group">
         {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder'=>'Nombre del insumo'])!!}
       </div>
       <button type="submit" class="btn btn-default">Buscar</button>
-    {!! Form::close() !!} 
-<h1>Registro de insumos</h1>
-<br>
-    <a href="#modalregistroinsumo" type="button" class="btn-primario">+ Nuevo insumo</a>    
+    {!! Form::close() !!}
+</div>
 <br><br><br>
  <center>
     <div class="tabla">

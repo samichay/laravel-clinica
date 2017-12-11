@@ -7,18 +7,22 @@
 </div>
 @endif
 @section('body')
-	{!!Form::open(['route' => 'paciente.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
-	  <div class="form-group">
-	  	{!! Form::text('name', null, ['class' => 'form-control', 'placeholder'=> 'Nombre de paciente'])!!}
-	  </div>
-	  <button type="submit" class="btn btn-default">Buscar</button>
-	{!! Form::close() !!}
-	
 	        	<h3 class="contenido--titulo">
                     Registro de Pacientes
                 </h3>
+				<br>
+				<hr></hr>
                 <br><br>
-                <a href="#modalregistropaciente" type="button" class="btn-primario">+ Nuevo Paciente</a>	
+				<div class="btn--aciones">
+				<a href="#modalregistropaciente" type="button" class="btn-primario">+ Nuevo Paciente</a>
+				{!!Form::open(['route' => 'paciente.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+					<div class="form-group">
+					{!! Form::text('name', null, ['class' => 'form-control', 'placeholder'=> 'Nombre de paciente'])!!}
+					</div>
+					<button type="submit" class="btn btn-default">Buscar</button>
+				{!! Form::close() !!}
+				</div>
+                	
                 <br><br><br>
                 <center>
                     <div class="tabla">

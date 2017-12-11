@@ -8,16 +8,20 @@
 @endif
 
 @section('body')
-    {!!Form::open(['route' => 'usuario.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+<h3>Registro de usuarios</h3>
+<br>
+<hr></hr>
+<br>
+<br>
+<div class="btn--aciones">
+<a href="#modalregistrousuario" type="button" class="btn-primario">+ Nuevo usuario</a>
+{!!Form::open(['route' => 'usuario.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
       <div class="form-group">
         {!! Form::text('name', null, ['class' => 'form-control', 'placeholder'=>'Nombre de usuario'])!!}
       </div>
       <button type="submit" class="btn btn-default">Buscar</button>
     {!! Form::close() !!}
-
-<h1>Registro de usuarios</h1>
-<br>
-    <a href="#modalregistrousuario" type="button" class="btn-primario">+ Nuevo usuario</a>    
+</div>    
 <br><br><br>
  <center>
     <div class="tabla">
