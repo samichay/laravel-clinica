@@ -1,65 +1,77 @@
-
-body {
-    background:#fffffa;
+*,h1,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+header{
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
 }
 
-header {
-    width:100%;
-    position:fixed;
-    overflow:hidden;
-    background:#252932;
-    margin-bottom:0px;
+#menu-bar{
+    display: none;
 }
 
-.wrapper {
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    overflow:hidden;
+header label{
+    float: right;
+    cursor: pointer;
+    z-index: 3;
+}
+.cont-header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+ }
+
+.logo,.ico{
+    color: white;
+    margin: 10px;
+    z-index: 3;
 }
 
-header .logogc {
-    color:#f2f2f2;
-    font-size:40px;
-    line-height:60px;
-    margin-left:60px;
-    float:left;
+a{
+    text-decoration: none;
+}
+.menu{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    background: rgba(213, 213, 213,0.7);
+    width: 100%;
+    max-width: 370px;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    
+}
+.icon{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+       
+}
+.icon a{
+    margin: 15px;
+    color: rgb(213, 8, 107);
+    width: 100%;
+    text-align: center;
+}
+.icon:hover{
+    background: rgb(213, 8, 107);
+}
+.icon:hover a{
+    color: white;
+    background: rgb(213, 8, 107);
 }
 
-header .usuariogc {
-    color:#f2f2f2;
-    font-size:20px;
-    line-height:60px;
-    margin-left:300px;
-    float:left;
-}
-
-header nav{
-    float:right;
-    line-height:60px;
-}
-
-header nav a{
-    display:inline-block;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 20px;
-    line-height:normal;
-    font-size:20px;
-    font-weight:bold;
-    -webkit-transition:all 500ms ease;
-    -o-transition:all 500ms ease;
-    transition:all 500ms ease;
-}
-
-header nav a:hover{
-    background:#f56f3a;
-    border-radius:50px;
-}
-
-.headergc{
-    position: fixed;
-    height:100px;
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
 }
 .servicios{
     height: 80vh;
@@ -118,7 +130,6 @@ footer p{
  color: rgb(213, 8, 107);
 }
 
-<<<<<<< HEAD
 @media(min-width:750px){
     header{
         position: relative;
@@ -155,13 +166,5 @@ footer p{
     header label{
     display: none;
     }
-=======
-.headergc .logogc{
-    line-height:100px;
-    font-size:30px;
->>>>>>> 8ab54aaf07149a72ee8595845f69c08392add75d
 }
 
-.headergc nav{
-    line-height:100px;
-}
