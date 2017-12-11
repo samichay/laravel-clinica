@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Reporte Por Pais</title>
+	<title>Pacientes Registrados</title>
 <style>
  
  .col-md-12 {
