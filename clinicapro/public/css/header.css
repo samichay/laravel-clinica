@@ -5,22 +5,18 @@ body {
 
 header {
     width:100%;
+    display: flex;
+    justify-content: end;
     position:fixed;
     overflow:hidden;
     background:#252932;
     margin-bottom:0px;
 }
 
-.wrapper {
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    overflow:hidden;
-}
 
 header .logogc {
     color:#f2f2f2;
-    font-size:40px;
+    font-size:20px;
     line-height:60px;
     margin-left:60px;
     float:left;
@@ -28,7 +24,7 @@ header .logogc {
 
 header .usuariogc {
     color:#f2f2f2;
-    font-size:20px;
+    font-size:15px;
     line-height:60px;
     margin-left:300px;
     float:left;
@@ -37,6 +33,7 @@ header .usuariogc {
 header nav{
     float:right;
     line-height:60px;
+    margin: 0 0 0 20px;
 }
 
 header nav a{
@@ -45,7 +42,7 @@ header nav a{
     text-decoration:none;
     padding:10px 20px;
     line-height:normal;
-    font-size:20px;
+    font-size:15px;
     font-weight:bold;
     -webkit-transition:all 500ms ease;
     -o-transition:all 500ms ease;
@@ -117,49 +114,9 @@ footer p{
  font-size: 15px;
  color: rgb(213, 8, 107);
 }
-
-<<<<<<< HEAD
-@media(min-width:750px){
-    header{
-        position: relative;
-         margin-top: 25px;
-    }
-    .logo{
-        margin: auto 0px;
-    }
-    .cont-header{
-        width: 80%;
-        justify-content:space-between;
-        align-content: center;
-        margin: auto;   
-    }
-    .menu{
-        top: 0;
-        margin-left: -50px;
-        width: auto;
-        position: static;
-        transform: translateX(0%);
-        flex-flow: row wrap;
-        background: none;
-        max-width: none;
-        
-    }
-    .icon{
-        width: auto;
-        color: white;
-         
-    }
-    .icon a{
-        color: white;
-    }
-    header label{
-    display: none;
-    }
-=======
 .headergc .logogc{
     line-height:100px;
     font-size:30px;
->>>>>>> 8ab54aaf07149a72ee8595845f69c08392add75d
 }
 
 .headergc nav{
