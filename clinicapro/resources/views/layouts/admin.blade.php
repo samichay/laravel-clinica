@@ -19,11 +19,10 @@
 		<!-- inicio header-->
 		<header class="header">
 			<div class="wrapper">
-				<div class="logogc">Siempre Mujer</div>
-					<div class="usuariogc">{{ Auth::user()->nick }}</div>
-					<nav>
+				<div class="usuariogc">{{ Auth::user()->nick }}</div>
+				<nav>
 					<a href="{{ url('/logout') }}">Salir</a>
-					</nav>
+				</nav>
 			</div>
 		</header>
 		<!-- fin header-->
@@ -97,7 +96,7 @@
 			<div id="menu--desplegable3">
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="/reportes" class="title-menu">Historial</a><li>
+						<li><a href="/reportes" class="title-menu">General</a><li>
 					</div>
 				</div>
 				<div class="contenedor-logos">

@@ -27,53 +27,7 @@ header label{
     align-content: center;
  }
 
-.logo,.ico{
-    color: white;
-    margin: 10px;
-    z-index: 3;
-}
-
-a{
-    text-decoration: none;
-}
-.menu{
-    position: absolute;
-    top: 50px;
-    display: flex;
-    flex-flow: column wrap;
-    background: rgba(213, 213, 213,0.7);
-    width: 100%;
-    max-width: 370px;
-    transition: all 0.5s;
-    transform: translateX(-100%);
-    
-}
-.icon{
-    height: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   
-       
-}
-.icon a{
-    margin: 15px;
-    color: rgb(213, 8, 107);
-    width: 100%;
-    text-align: center;
-}
-.icon:hover{
-    background: rgb(213, 8, 107);
-}
-.icon:hover a{
-    color: white;
-    background: rgb(213, 8, 107);
-}
-
-#menu-bar:checked ~ .menu{
-    transform: translateX(0%);
-}
-
+*{
 @media(min-width:750px){
     header{
         position: relative;
@@ -117,22 +71,18 @@ body {
 
 header {
     width:100%;
+    display: flex;
+    justify-content: flex-end;
     position:fixed;
     overflow:hidden;
     background:#252932;
     margin-bottom:0px;
 }
 
-.wrapper {
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    overflow:hidden;
-}
 
 header .logogc {
     color:#f2f2f2;
-    font-size:40px;
+    font-size:20px;
     line-height:60px;
     margin-left:60px;
     float:left;
@@ -140,7 +90,7 @@ header .logogc {
 
 header .usuariogc {
     color:#f2f2f2;
-    font-size:20px;
+    font-size:15px;
     line-height:60px;
     margin-left:300px;
     float:left;
@@ -149,6 +99,7 @@ header .usuariogc {
 header nav{
     float:right;
     line-height:60px;
+    margin: 0 0 0 20px;
 }
 
 header nav a{
@@ -157,7 +108,7 @@ header nav a{
     text-decoration:none;
     padding:10px 20px;
     line-height:normal;
-    font-size:20px;
+    font-size:15px;
     font-weight:bold;
     -webkit-transition:all 500ms ease;
     -o-transition:all 500ms ease;
@@ -173,7 +124,62 @@ header nav a:hover{
     position: fixed;
     height:100px;
 }
-
+.servicios{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicios--contenido{
+    text-align: center;
+}
+.servicios--informacion{
+    display: flex;
+    align-items: center;
+}
+.servicios--informacion_full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 70px;
+}
+.servicios--informacion_full img{
+    padding:0.5em;
+    width: 140px;
+    background:  rgb(213, 8, 107);
+    border-radius: 400px;
+}
+.servicios--informacion_full h4{
+    margin: 20px 0;
+    color: rgb(213, 8, 107);
+}
+.titulo_segundario{
+    font-weight: inherit;
+    font-size: 30px;
+    margin: 0 0 150px 0;
+}
+.titulo_segundario span{
+    font-weight: bolder;
+    color: rgb(213, 8, 107);
+    margin: 0 8px;
+}
+footer{
+    background: rgb(27, 27, 27);
+    padding: 2em 0;
+    text-align: center;
+}
+footer a{
+    margin: 5px 15px;
+    color: white; 
+}
+footer a:hover{
+    color: rgb(213, 8, 107);    
+}
+footer p{
+ margin:  15px 0 -5px 0;
+ font-size: 15px;
+ color: rgb(213, 8, 107);
+}
 .headergc .logogc{
     line-height:100px;
     font-size:30px;
@@ -181,6 +187,4 @@ header nav a:hover{
 
 .headergc nav{
     line-height:100px;
->>>>>>> ef413a390204d3042c8dc14e4738943878ff861e
 }
-

@@ -56,3 +56,7 @@ Route::get('/', function () {
 
 Route::get('reportes','PdfController@index');
 Route::get('crear_reporte_pacientes/{tipo}','PdfController@crear_reporte_pacientes');
+Route::get('crear_reporte_insumos/{tipo}','PdfController@crear_reporte_insumos');
+Route::get('crear_reporte_insumos_privado/{tipo}/{filtro}','PdfController@crear_reporte_insumos_privado');
+
+
