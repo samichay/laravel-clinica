@@ -40,3 +40,13 @@ function Desplegar3(){
 		c=c+1;
 	}
 }
+
+/*function cargarlistado(listado){
+	if (listado==3) {var url = "reportes";}
+
+	$("#contenido_principal").html($("#cargador_empresa").html());
+	$.get(url,function(resul)){
+
+		$("#contenido_principal").html(resul);
+	})
+}*/

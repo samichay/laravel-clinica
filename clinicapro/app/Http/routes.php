@@ -52,3 +52,6 @@ Route::get('inicio', 'HomeController@inicio');
 Route::get('/', function () {
     return view('main');
 });
+
+Route::get('reportes','PdfController@index');
+Route::get('crear_reporte_pacientes/{tipo}','PdfController@crear_reporte_pacientes');
