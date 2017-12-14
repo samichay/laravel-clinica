@@ -44,7 +44,7 @@ class HomeController extends Controller
         $atenciones=$atenciones->count();
         $pacientes=$pacientes->count();
         $insumos=$insumos->count();
-          $user  =Atencion::select(DB::raw('sum(precio) as precio2, day(fecha_atencion)'))->whereDate('fecha_atencion', '>', Carbon::now()->subDays(1005)->format('Y-m-d'))->groupBy('fecha_atencion')->get();
+        $user  =Atencion::select(DB::raw('sum(precio) as precio2, day(fecha_atencion)'))->whereDate('fecha_atencion', '>', Carbon::now()->subDays(100)->format('Y-m-d'))->groupBy('fecha_atencion')->get();
 /*          dd($user);
 */        return view('inicio')
             ->with('usuarios', $usuarios)

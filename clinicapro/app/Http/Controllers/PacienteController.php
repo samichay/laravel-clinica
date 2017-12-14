@@ -108,7 +108,6 @@ class PacienteController extends Controller
      */
     public function destroy($id)
     {
-        
         Paciente::destroy($id);
         Session::flash('message','Usuario Eliminado Correctamente');
         return Redirect::to('/paciente');

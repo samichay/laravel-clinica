@@ -75,19 +75,15 @@
 			<div id="menu--desplegable2">
 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="#" class="title-menu">Completada</a><li>
+						<li><a href="/atencion" class="title-menu">Generales</a><li>
 					</div>
 				</div>
-				<div class="contenedor-logos">
+				
+{{-- 				<div class="contenedor-logos">
 					<div class="logo">
-						<li><a href="#" class="title-menu">Papanicolao</a><li>
+						<li><a href="/papanicolao" class="title-menu">Papanicolao</a><li>
 					</div>
-				</div>
-				<div class="contenedor-logos">
-					<div class="logo">
-						<li><a href="#" class="title-menu">Planificacion</a><li>
-					</div>
-				</div>
+				</div> --}}
 			</div>
 
 			<div class="contenedor-logos">
@@ -102,28 +98,14 @@
 						<li><a href="/reportes" class="title-menu">General</a><li>
 					</div>
 				</div>
-				<div class="contenedor-logos">
-					<div class="logo">
-						<li><a href="#" class="title-menu">Ganancia</a><li>
-					</div>
-				</div>
-				<div class="contenedor-logos">
-					<div class="logo">
-						<li><a href="#" class="title-menu">Insumos</a><li>
-					</div>
-				</div>
-				<div class="contenedor-logos">
-					<div class="logo">
-						<li><a href="#" class="title-menu">Citas</a><li>
-					</div>
-				</div>
+				
 			</div>
-			<div class="contenedor-logos">
+			{{-- <div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">build</i>
 					<a href="#" class="title-menu">Ayuda</a>	
 				</div>
-			</div>
+			</div> --}}
 		</div>
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 

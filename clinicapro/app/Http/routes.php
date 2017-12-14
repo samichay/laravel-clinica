@@ -1,17 +1,12 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
+/* |--------------------------------------------------------------------------
 | Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-//----------------inicio paciente
-/*Route::get('/pacientes', 'PacienteController@vista');
+|-------------------------------------------------------------------------- |
+| Here is where you can register all of the routes for an application. | It's
+a breeze. Simply tell Laravel the URIs it should respond to | and give it the
+controller to call when that URI is requested. | */ //----------------inicio
+ /*Route::get('/pacientes', 'PacienteController@vista');
 Route::post('/pacientes/registro', 'PacienteController@create');
 Route::get('/pacientes/actualizar/{id}', 'PacienteController@actualizar');
 Route::put('/pacientes/actualizar', 'PacienteController@update');
@@ -20,7 +15,9 @@ Route::resource('paciente','PacienteController');
 Route::resource('insumo','InsumosController');
 Route::resource('atencion','AtencionController');
 Route::resource('usuario','UsuariosController');
+Route::resource('historial','PdfController');
 
+Route::get('papanicolao', 'AtencionController@papa');
 
 //----------------fin paciete
 //------------------------------------------------------------------------

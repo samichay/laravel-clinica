@@ -45,7 +45,7 @@
 										<td>{{$paciente->dni}}	</td>
 										<td>{!!link_to_route('paciente.edit', $title = 'create', $parameters = $paciente, $attributes = ['class'=>'material-icons btn-accion'])!!}{{-- 
 											<a href="paciente.edit" type="button" class="btn-accion">Edit</a> --}}
-	                                    </td>
+	                                    
 									</tr>
 								@endforeach
                             </tbody>

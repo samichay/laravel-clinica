@@ -34,7 +34,7 @@ class PdfController extends Controller
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($view);
         
-        if($tipo==1){return $pdf->stream('reporte');}
+        if($tipo==1){return $pdf->stream('reporte.pdf');}
         if($tipo==2){return $pdf->download('reporte.pdf'); }
         if($tipo==3){return $pdf->stream('reporte.pdf'); }
 
@@ -63,12 +63,13 @@ class PdfController extends Controller
 
     }
 
-    public function crear_reporte_insumos_privado($tipo,$filtro){
+    public function crear_reporte_pacientes_privado($id){
         
-        $vistaurl="pdf.reporte_insumos";
-        $insumos=Insumos::where('id_insumos' ,'=',$filtro)->get();
+        $vistaurl="pdf.reporte_pacientes";
+        $pacientes=Paciente::where('id_paciente' ,'=',$id)->get();
+        $tipo='1';
 
-        return $this->crearPDF($insumos, $vistaurl, $tipo);
+        return $this->crearPDF($pacientes, $vistaurl, $tipo);
 
     }    
 

@@ -84,7 +84,7 @@
         </div>
       </div>
 <br>
-<h1 style="margin: 4;font-size: 24px;"> <br>Ventas por dia  </h1>
+<h1 style="margin: 4;font-size: 24px;"> <br>Ganancias por dia  </h1>
 
     <div id="curve_chart" style="width: 1000px; height: 600px; float: left;"></div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

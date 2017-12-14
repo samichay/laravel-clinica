@@ -180,4 +180,8 @@ class AtencionController extends Controller
     {
         //
     }
+    public function papa(){
+        $papa = Papanicolao::paginate(20);
+        return view('atencion.papanicolao',compact('papa',$papa));
+    }
 }
