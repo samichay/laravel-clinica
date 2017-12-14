@@ -88,7 +88,7 @@
 				<br>
 				<div class="iniciar--campo">
 					<h5>{!!Form::label('fenacimiento','Fecha de nacimiento:')!!}</h5>
-					{!!Form::text('fenacimiento',null,['class'=>'input--formulario','placeholder'=>'La fecha de nacimiento'])!!}
+					{!!Form::date('fenacimiento',null,['class'=>'input--formulario','placeholder'=>'La fecha de nacimiento'])!!}
 				</div>
 				<br>
 				<div class="iniciar--campo">
@@ -108,7 +108,7 @@
 				<br>
 				<div class="iniciar--campo">
 					<h5>{!!Form::label('estcivil','Estado civil:')!!}</h5>
-					{!!Form::text('estcivil',null,['class'=>'input--formulario','placeholder'=>'Estado civil'])!!}
+					{!!Form::select('estcivil',['Soltera','Casada','Divorciada','Viuda'],2,['class'=>'input--formulario','placeholder'=>'Estado civil'])!!}
 				</div>
 				<br>
 				{!!Form::submit('Agregar',['class'=>'btn-primario'])!!}

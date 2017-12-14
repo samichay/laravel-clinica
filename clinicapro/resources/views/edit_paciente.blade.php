@@ -30,7 +30,7 @@
 		<br>
 		<div class="iniciar--campo">
 			<h5>{!!Form::label('fenacimiento','Fecha de nacimiento:')!!}</h5>
-			{!!Form::text('fenacimiento',null,['class'=>'input--formulario','placeholder'=>'La fecha de nacimiento'])!!}
+			{!!Form::date('fenacimiento',null,['class'=>'input--formulario','placeholder'=>'La fecha de nacimiento'])!!}
 		</div>
 		<br>
 		<div class="iniciar--campo">

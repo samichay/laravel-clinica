@@ -84,7 +84,7 @@
         <br>
         <div class="iniciar--campo">
             <h5>{!!Form::label('tipo_usuario','Tipo de usuario:')!!}</h5>
-            {!!Form::text('tipo_usuario',null,['class'=>'input--formulario','placeholder'=>'Tipo de usuario'])!!}
+            {!!Form::select('tipo_usuario',['Invitado','Administrador'],2,['class'=>'input--formulario','placeholder'=>'Tipo de usuario'])!!}
         </div>
         <br>
         {!!Form::submit('Agregar',['class'=>'btn-primario'])!!}
