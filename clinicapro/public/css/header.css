@@ -71,7 +71,7 @@ header {
     justify-content: flex-end;
     position:fixed;
     overflow:hidden;
-    background:#2077b6;
+    background:#3c8dbc;
     margin-bottom:0px;
 }
 
@@ -118,8 +118,8 @@ header nav a:hover{
 
 .headergc{
     position: fixed;
-    height:100px;
-}
+/*    height:100px;
+*/}
 .servicios{
     height: 80vh;
     display: flex;
@@ -182,5 +182,5 @@ footer p{
 }
 
 .headergc nav{
-    line-height:100px;
+/*    line-height:100px;*/
 }

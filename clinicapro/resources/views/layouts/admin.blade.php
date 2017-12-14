@@ -8,9 +8,12 @@
        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="{{asset('css/admin.css')}}">
 		<link rel="stylesheet" href="{{asset('css/header.css')}}">
-		<script type="text/javascript" src={{asset('boostrap.min.js')}}></script>
+  		<link rel="stylesheet" type="text/css" href="{{asset('Ionicons\css\ionicons.min.css')}}">
+
+        <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+		<script type="text/javascript" src={{asset('js/boostrap.min.js')}}></script>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src={{asset('header.js')}}></script>
+		<script type="text/javascript" src={{asset('js/header.js')}}></script>
         <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
 
 	</head>
@@ -19,7 +22,7 @@
 		<!-- inicio header-->
 		<header class="header">
 			<div class="wrapper">
-				<div class="usuariogc">{{ Auth::user()->nick }}</div>
+				<div class="usuariogc">Bienvenido: {{ Auth::user()->nick }}</div>
 				<nav>
 					<a href="{{ url('/logout') }}">Salir</a>
 				</nav>
