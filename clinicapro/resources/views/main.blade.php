@@ -15,11 +15,9 @@
 	    <input type="checkbox" id="menu-bar">
 	    <label class="icon-menu ico" for="menu-bar"></label>
 	    <div class="menu">
-	        <div class="icon"><a href="#">Inicio</a></div>
-	        <div class="icon"><a href="#">Servicio</a></div>
-	        <div class="icon"><a href="#">Doctores</a></div>
-	        <div class="icon"><a href="#">Especialidad</a></div>
-	        <div class="icon"><a href="#">Contactenos</a></div>
+	        <div class="icon"><a href="/">Inicio</a></div>
+	        <div class="icon"><a href="#servicio">Servicio</a></div>
+	        <div class="icon"><a href="#cliente">Clientes</a></div>
 	    </div>
 	    
     </div>
@@ -35,7 +33,7 @@
             </div>
   
 	</section>
-	<section class="servicios">
+	<section id="servicio" class="servicios">
 		<div class="servicios--contenido">
 			<h2 class="titulo_segundario">Servicios <span>brindados</span></h2>
 			<div class="servicios--informacion">
@@ -57,6 +55,19 @@
 			</div>
 		</div>
 	</section>	
+	<section id="cliente" class="clientes">
+	<h2 class="titulo_segundario">Nuestros <span>Clientes</span></h2>
+		<div class="publico">
+			<div class="conte">
+				<div>"una gran atencion garatizo que es la mejor<br>clinica de tacna"</div>
+				<i>Silvia contreras</i>
+			</div>
+			<div class="conte">
+				<div>"Estupenda clinica se ve que los dcotores<br>Saben lo que hacen"</div>
+				<i>Maria del carpio</i>
+			</div>
+		</div>
+	</section>
 	<footer>
 		<div>
 			<a href="#">Inicio</a>

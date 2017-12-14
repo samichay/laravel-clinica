@@ -112,6 +112,19 @@ a{
     color: rgb(213, 8, 107);
     margin: 0 8px;
 }
+.clientes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+.clientes .conte{
+    padding: 0 20px;
+}
+.publico{
+    display: flex;
+}
 footer{
     background: rgb(27, 27, 27);
     padding: 2em 0;
