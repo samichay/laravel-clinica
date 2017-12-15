@@ -69,9 +69,10 @@
 			<div class="contenedor-logos">
 				<div class="logo">
 					<i class="material-icons">local_library</i>
-					<a href="#" class="title-menu" onclick="Desplegar2()">Atencion</a>
+					<a href="/atencion" class="title-menu">Atencion</a>
 				</div>
 			</div>
+
 			<div id="menu--desplegable2">
 				<div class="contenedor-logos">
 					<div class="logo">
@@ -85,6 +86,7 @@
 					</div>
 				</div> --}}
 			</div>
+
 
 			<div class="contenedor-logos">
 				<div class="logo">
