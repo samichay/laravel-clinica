@@ -21,12 +21,16 @@
 	<body>
 		<!-- inicio header-->
 		<header class="header">
+		<div>Siempre mujer</div>
 			<div class="wrapper">
-				<div class="usuariogc">Bienvenido: {{ Auth::user()->nick }}</div>
+				<div>
+					<div class="usuariogc">Bienvenido: {{ Auth::user()->nick }}</div>
 				<nav>
 					<a href="{{ url('/logout') }}">Salir</a>
 				</nav>
+				</div>
 			</div>
+
 		</header>
 		<!-- fin header-->
 		

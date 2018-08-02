@@ -68,7 +68,7 @@ body {
 header {
     width:100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     position:fixed;
     overflow:hidden;
     background:#3c8dbc;
